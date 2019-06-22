@@ -38,12 +38,13 @@ class Logger(object):
 		self.logger.addHandler(th) 
 		
 
-	def info(self,*msg): 	self.logger.info(' '.join(str(d) for d in msg))
-	def debug(self,*msg): 	self.logger.debug(' '.join(str(d) for d in msg))
+	def info(self,*msg): 		self.logger.info(' '.join(str(d) for d in msg))
+	def debug(self,*msg): 		self.logger.debug(' '.join(str(d) for d in msg))
 	def warning(self,*msg): 	self.logger.warning(' '.join(str(d) for d in msg))
-	def error(self,*msg): 	self.logger.error(' '.join(str(d) for d in msg))
-	def critical(self,*msg): self.logger.critical(' '.join(str(d) for d in msg))
-	def close(self): self.logger=None
+	def error(self,*msg): 		self.logger.error(' '.join(str(d) for d in msg))
+	def critical(self,*msg): 	self.logger.critical(' '.join(str(d) for d in msg))
+	def fatal(self,*msg): 		self.logger.fatal(' '.join(str(d) for d in msg))
+	def close(self): 			self.logger=None
 
 class CAP_Thread(threading.Thread):
 	#建立事件類別
