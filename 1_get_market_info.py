@@ -18,7 +18,7 @@ class CAP_Thread(threading.Thread):
 			self.MSG=parent.MSG
 			self.parent=parent
 		def OnConnection(self, nKind, nCode):
-			self.parent.log.critical('[e]OnConnection:', self.MSG(nKind),nKind, self.MSG(nCode))	
+			self.parent.log.critical('[v]OnConnection:', self.MSG(nKind),nKind, self.MSG(nCode))	
 			if nKind==3003: self.parent.step2()
 				
 		def OnNotifyServerTime(self,sHour,sMinute,sSecond,nTotal):
@@ -92,30 +92,35 @@ class CAP_Thread(threading.Thread):
 				market_code.append(c)
 
 		if len(market_dict)>0:
-			self.stock_list=self.stock_list+market_dict
-			self.stock_code=self.stock_code+market_code
+			self.stock_list+=market_dict
+			self.stock_code+=market_code
 			with open('market_info/stock_list.json', 'w', encoding='utf-8') as j: j.write(json.dumps(self.stock_list,ensure_ascii=False))
 			with open('market_info/stock_code.json', 'w', encoding='utf-8') as j: j.write(json.dumps(self.stock_code,ensure_ascii=False))
-			print('[e]Get stock market done',len(market_dict),len(self.stock_list))
+			print('[v]Get stock market done',len(market_dict),len(self.stock_list))
 			self.status[sMarketNo]=True
+
 	
 	def FilterFeatureList(self,bstrStockData):
 		import json
+		today = date.today()
+		M0=str(today.month)
+		M1=str((today.month+1)%12)
 		tmp_dict=bstrStockData.split(';')
 		market_dict=[]
 		market_code=[]
+		if len(tmp_dict)>500 or len(tmp_dict)<70: return 	 #忽略股票與外幣期貨
 		for m in tmp_dict:
-			if ('TX' in m) and (',' in m) and not('/' in m) and not('AM' in m): 
+			if (M0 in m or M1 in m) and (',' in m) and not('/' in m) and not('AM' in m): 
 				c=m.split(',')[0]
 				market_dict.append(m)
 				market_code.append(c)
 
 		if len(market_dict)>0:
-			self.feature_list=market_dict
-			self.feature_code=market_code
+			self.feature_list+=market_dict
+			self.feature_code+=market_code
 			with open('market_info/feature_list.json', 'w', encoding='utf-8') as j: j.write(json.dumps(self.feature_list,ensure_ascii=False))
 			with open('market_info/feature_code.json', 'w', encoding='utf-8') as j: j.write(json.dumps(self.feature_code,ensure_ascii=False))
-			print('[e]Get future market done',len(market_dict),len(self.feature_list))
+			print('[v]Get future market done',len(market_dict),len(self.feature_list))
 			self.status[2]=True
 	
 				
@@ -141,11 +146,11 @@ class CAP_Thread(threading.Thread):
 				market_code.append(c)
 		
 		if len(market_dict)>0:
-			self.option_list=market_dict
-			self.option_code=market_code
+			self.option_list+=market_dict
+			self.option_code+=market_code
 			with open('market_info/option_list.json', 'w', encoding='utf-8') as j: j.write(json.dumps(self.option_list,ensure_ascii=False))
 			with open('market_info/option_code.json', 'w', encoding='utf-8') as j: j.write(json.dumps(self.option_code,ensure_ascii=False))
-			print('[e]Get option market done',len(market_dict),len(self.option_list))
+			print('[v]Get option market done',len(market_dict),len(self.option_list))
 			self.status[3]=True
 		
 	
@@ -171,13 +176,14 @@ if __name__ == '__main__':
 	log = lu.Logger(level='crit')
 	#輸入身分證與密碼
 	Id=getpass.getpass(prompt='ID= ')
-	Pw=getpass.getpass(prompt='Password= ')
+	Pw=getpass.getpass(prompt='PW= ')
 	
 	t1=CAP_Thread(Id,Pw,log) 
 	t1.start()
 	while t1.check_alive():
-		time.sleep(0.001)
+		time.sleep(0.0001)
 		pythoncom.PumpWaitingMessages()
 		if t1.check_all_ready()==True:break
 	time.sleep(1)
 	t1.join()
+	t1=None

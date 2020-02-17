@@ -2,3 +2,5 @@
 _getpass.py
 *.pyc
 log/*
+data/*
+__pycache__/*
