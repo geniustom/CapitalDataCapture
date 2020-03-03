@@ -118,8 +118,8 @@ class CAP_Thread(threading.Thread):
 		if len(market_dict)>0:
 			self.feature_list+=market_dict
 			self.feature_code+=market_code
-			with open('market_info/feature_list.json', 'w', encoding='utf-8') as j: j.write(json.dumps(self.feature_list,ensure_ascii=False))
-			with open('market_info/feature_code.json', 'w', encoding='utf-8') as j: j.write(json.dumps(self.feature_code,ensure_ascii=False))
+			with open('market_info/future_list.json', 'w', encoding='utf-8') as j: j.write(json.dumps(self.feature_list,ensure_ascii=False))
+			with open('market_info/future_code.json', 'w', encoding='utf-8') as j: j.write(json.dumps(self.feature_code,ensure_ascii=False))
 			print('[v]Get future market done',len(market_dict),len(self.feature_list))
 			self.status[2]=True
 	
@@ -174,6 +174,7 @@ class CAP_Thread(threading.Thread):
 
 if __name__ == '__main__':
 	log = lu.Logger(level='crit')
+
 	#輸入身分證與密碼
 	Id=getpass.getpass(prompt='ID= ')
 	Pw=getpass.getpass(prompt='PW= ')

@@ -37,3 +37,14 @@ class Logger(object):
 	def critical(self,*msg): 	self.logger.critical(' '.join(str(d) for d in msg))
 	def fatal(self,*msg): 		self.logger.fatal(' '.join(str(d) for d in msg))
 	def close(self): 			self.logger=None
+	
+
+def Beep(tone_list,period):
+	import ctypes
+	player = ctypes.windll.kernel32
+	for t in tone_list:
+		player.Beep(100*t,period)
+	
+	
+if __name__ == '__main__':
+	Beep([20,40,60,80],120)

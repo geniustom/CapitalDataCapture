@@ -1,0 +1,1082 @@
+-----------------------------------------------------------------
+[15072] 2020/02/28 22:44:16.380 SKQuoteLib_RequestStocks (0 , TX00)
+[15072] 2020/02/28 22:44:16.380 Divide StockNo {TX00}
+[15072] 2020/02/28 22:44:16.381 Stock Not Exist 
+[15072] 2020/02/28 22:44:23.206 SKQuoteLib_EnterMonitor IP¡Gsrvsolace-fg.capital.com.tw
+[15072] 2020/02/28 22:44:23.260 OnSessionConnect¡ACode: 0
+[15072] 2020/02/28 22:44:23.383 market(0)  Ready!
+[15072] 2020/02/28 22:44:23.402 market(2)  Ready!
+[15072] 2020/02/28 22:44:23.402 market(1)  Ready!
+[15072] 2020/02/28 22:44:23.409 market(2)  Ready!
+[15072] 2020/02/28 22:44:23.409 market(3)  Ready!
+[15072] 2020/02/28 22:44:23.409 market(4)  Ready!
+[15072] 2020/02/28 22:44:23.409 market(3)  Ready!
+[15072] 2020/02/28 22:44:23.660 Market Info is OK!
+[15072] 2020/02/28 22:44:23.735 Catalog info is OK!
+[15072] 2020/02/28 22:44:29.747 SKQuoteLib_RequestStocks (0 , TX00)
+[15072] 2020/02/28 22:44:29.747 Divide StockNo {TX00}
+[15072] 2020/02/28 22:44:29.747 Add Basket MarketNo¡G2 StockIdx¡G0
+[15072] 2020/02/28 22:44:29.747 Return PageNo¡G 1 
+[15072] 2020/02/28 22:45:27.866  SKQuoteLib_RequestTicks ( 0 , TX00 )
+[15072] 2020/02/28 22:45:27.866 Return PageNo¡G 0 
+[15072] 2020/02/28 22:45:28.019  SKQuoteLib_GetBest5 ( 2 , 0 )
+[15072] 2020/02/28 23:11:36.406 SKQuoteLib_RequestStocks (0 , TX00,MTX00)
+[15072] 2020/02/28 23:11:36.406 Divide StockNo {TX00}
+[15072] 2020/02/28 23:11:36.406 Add Basket MarketNo¡G2 StockIdx¡G0
+[15072] 2020/02/28 23:11:36.406 Divide StockNo {MTX00}
+[15072] 2020/02/28 23:11:36.406 Add Basket MarketNo¡G2 StockIdx¡G7
+[15072] 2020/02/28 23:11:36.406 Return PageNo¡G 2 
+[15072] 2020/02/28 23:11:51.030 SKQuoteLib_RequestStocks (0 , TF00)
+[15072] 2020/02/28 23:11:51.030 Divide StockNo {TF00}
+[15072] 2020/02/28 23:11:51.030 Add Basket MarketNo¡G2 StockIdx¡G288
+[15072] 2020/02/28 23:11:51.030 Return PageNo¡G 3 
+[15072] 2020/02/28 23:11:57.646 SKQuoteLib_RequestStocks (0 , TX00,MTX00)
+[15072] 2020/02/28 23:11:57.646 Divide StockNo {TX00}
+[15072] 2020/02/28 23:11:57.646 Add Basket MarketNo¡G2 StockIdx¡G0
+[15072] 2020/02/28 23:11:57.646 Divide StockNo {MTX00}
+[15072] 2020/02/28 23:11:57.646 Add Basket MarketNo¡G2 StockIdx¡G7
+[15072] 2020/02/28 23:11:57.646 Return PageNo¡G 4 
+[15072] 2020/02/28 23:12:00.586 SKQuoteLib_RequestStocks (0 , TX00,MTX00)
+[15072] 2020/02/28 23:12:00.586 Divide StockNo {TX00}
+[15072] 2020/02/28 23:12:00.586 Add Basket MarketNo¡G2 StockIdx¡G0
+[15072] 2020/02/28 23:12:00.586 Divide StockNo {MTX00}
+[15072] 2020/02/28 23:12:00.586 Add Basket MarketNo¡G2 StockIdx¡G7
+[15072] 2020/02/28 23:12:00.586 Return PageNo¡G 5 
+[15072] 2020/02/28 23:12:18.829 SKQuoteLib_RequestStocks (0 , TX00,MTX00)
+[15072] 2020/02/28 23:12:18.829 Divide StockNo {TX00}
+[15072] 2020/02/28 23:12:18.829 Add Basket MarketNo¡G2 StockIdx¡G0
+[15072] 2020/02/28 23:12:18.829 Divide StockNo {MTX00}
+[15072] 2020/02/28 23:12:18.829 Add Basket MarketNo¡G2 StockIdx¡G7
+[15072] 2020/02/28 23:12:18.829 Return PageNo¡G 6 
+[15072] 2020/02/28 23:13:33.646 -----------------------------------------------------------------
+[15072] 2020/02/28 23:28:09.210 SKQuoteLib_EnterMonitor IP¡Gsrvsolace-fg.capital.com.tw
+[15072] 2020/02/28 23:28:09.354 OnSessionConnect¡ACode: 0
+[15072] 2020/02/28 23:28:09.389  SKQuoteLib_RequestTicks ( 0 , TX00 )
+[15072] 2020/02/28 23:28:09.390 SKQuoteLib_RequestFutureTradeInfo (0 , TX00)
+[15072] 2020/02/28 23:28:09.390 SKQuoteLib_RequestStocks (0 , TX00)
+[15072] 2020/02/28 23:28:09.390 Divide StockNo {TX00}
+[15072] 2020/02/28 23:28:09.390 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.390 Return PageNo¡G 1 
+[15072] 2020/02/28 23:28:09.391  SKQuoteLib_RequestTicks ( 1 , TX03 )
+[15072] 2020/02/28 23:28:09.391 SKQuoteLib_RequestFutureTradeInfo (1 , TX03)
+[15072] 2020/02/28 23:28:09.392 SKQuoteLib_RequestStocks (1 , TX03)
+[15072] 2020/02/28 23:28:09.392 Divide StockNo {TX03}
+[15072] 2020/02/28 23:28:09.392 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.392 Return PageNo¡G 1 
+[15072] 2020/02/28 23:28:09.392  SKQuoteLib_RequestTicks ( 2 , TX04 )
+[15072] 2020/02/28 23:28:09.393 SKQuoteLib_RequestFutureTradeInfo (2 , TX04)
+[15072] 2020/02/28 23:28:09.393 SKQuoteLib_RequestStocks (2 , TX04)
+[15072] 2020/02/28 23:28:09.393 Divide StockNo {TX04}
+[15072] 2020/02/28 23:28:09.393 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.393 Return PageNo¡G 2 
+[15072] 2020/02/28 23:28:09.394  SKQuoteLib_RequestTicks ( 3 , TX05 )
+[15072] 2020/02/28 23:28:09.394 SKQuoteLib_RequestFutureTradeInfo (3 , TX05)
+[15072] 2020/02/28 23:28:09.395 SKQuoteLib_RequestStocks (3 , TX05)
+[15072] 2020/02/28 23:28:09.395 Divide StockNo {TX05}
+[15072] 2020/02/28 23:28:09.395 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.395 Return PageNo¡G 3 
+[15072] 2020/02/28 23:28:09.395  SKQuoteLib_RequestTicks ( 4 , TX06 )
+[15072] 2020/02/28 23:28:09.396 SKQuoteLib_RequestFutureTradeInfo (4 , TX06)
+[15072] 2020/02/28 23:28:09.396 SKQuoteLib_RequestStocks (4 , TX06)
+[15072] 2020/02/28 23:28:09.396 Divide StockNo {TX06}
+[15072] 2020/02/28 23:28:09.396 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.396 Return PageNo¡G 4 
+[15072] 2020/02/28 23:28:09.397  SKQuoteLib_RequestTicks ( 5 , TX09 )
+[15072] 2020/02/28 23:28:09.397 SKQuoteLib_RequestFutureTradeInfo (5 , TX09)
+[15072] 2020/02/28 23:28:09.398 SKQuoteLib_RequestStocks (5 , TX09)
+[15072] 2020/02/28 23:28:09.398 Divide StockNo {TX09}
+[15072] 2020/02/28 23:28:09.398 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.398 Return PageNo¡G 5 
+[15072] 2020/02/28 23:28:09.398  SKQuoteLib_RequestTicks ( 6 , TX12 )
+[15072] 2020/02/28 23:28:09.399 SKQuoteLib_RequestFutureTradeInfo (6 , TX12)
+[15072] 2020/02/28 23:28:09.399 SKQuoteLib_RequestStocks (6 , TX12)
+[15072] 2020/02/28 23:28:09.399 Divide StockNo {TX12}
+[15072] 2020/02/28 23:28:09.399 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.399 Return PageNo¡G 6 
+[15072] 2020/02/28 23:28:09.399  SKQuoteLib_RequestTicks ( 7 , MTX00 )
+[15072] 2020/02/28 23:28:09.400 SKQuoteLib_RequestFutureTradeInfo (7 , MTX00)
+[15072] 2020/02/28 23:28:09.400 SKQuoteLib_RequestStocks (7 , MTX00)
+[15072] 2020/02/28 23:28:09.400 Divide StockNo {MTX00}
+[15072] 2020/02/28 23:28:09.400 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.400 Return PageNo¡G 7 
+[15072] 2020/02/28 23:28:09.401  SKQuoteLib_RequestTicks ( 8 , MTX03 )
+[15072] 2020/02/28 23:28:09.401 SKQuoteLib_RequestFutureTradeInfo (8 , MTX03)
+[15072] 2020/02/28 23:28:09.401 SKQuoteLib_RequestStocks (8 , MTX03)
+[15072] 2020/02/28 23:28:09.402 Divide StockNo {MTX03}
+[15072] 2020/02/28 23:28:09.402 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.402 Return PageNo¡G 8 
+[15072] 2020/02/28 23:28:09.402  SKQuoteLib_RequestTicks ( 9 , MTX04 )
+[15072] 2020/02/28 23:28:09.402 SKQuoteLib_RequestFutureTradeInfo (9 , MTX04)
+[15072] 2020/02/28 23:28:09.403 SKQuoteLib_RequestStocks (9 , MTX04)
+[15072] 2020/02/28 23:28:09.403 Divide StockNo {MTX04}
+[15072] 2020/02/28 23:28:09.403 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.403 Return PageNo¡G 9 
+[15072] 2020/02/28 23:28:09.403  SKQuoteLib_RequestTicks ( 10 , MTX05 )
+[15072] 2020/02/28 23:28:09.404 SKQuoteLib_RequestFutureTradeInfo (10 , MTX05)
+[15072] 2020/02/28 23:28:09.404 SKQuoteLib_RequestStocks (10 , MTX05)
+[15072] 2020/02/28 23:28:09.404 Divide StockNo {MTX05}
+[15072] 2020/02/28 23:28:09.404 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.404 Return PageNo¡G 10 
+[15072] 2020/02/28 23:28:09.405  SKQuoteLib_RequestTicks ( 11 , MTX06 )
+[15072] 2020/02/28 23:28:09.405 SKQuoteLib_RequestFutureTradeInfo (11 , MTX06)
+[15072] 2020/02/28 23:28:09.406 SKQuoteLib_RequestStocks (11 , MTX06)
+[15072] 2020/02/28 23:28:09.406 Divide StockNo {MTX06}
+[15072] 2020/02/28 23:28:09.406 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.406 Return PageNo¡G 11 
+[15072] 2020/02/28 23:28:09.406  SKQuoteLib_RequestTicks ( 12 , MTX09 )
+[15072] 2020/02/28 23:28:09.406 SKQuoteLib_RequestFutureTradeInfo (12 , MTX09)
+[15072] 2020/02/28 23:28:09.407 SKQuoteLib_RequestStocks (12 , MTX09)
+[15072] 2020/02/28 23:28:09.407 Divide StockNo {MTX09}
+[15072] 2020/02/28 23:28:09.407 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.407 Return PageNo¡G 12 
+[15072] 2020/02/28 23:28:09.407  SKQuoteLib_RequestTicks ( 13 , MTX12 )
+[15072] 2020/02/28 23:28:09.408 SKQuoteLib_RequestFutureTradeInfo (13 , MTX12)
+[15072] 2020/02/28 23:28:09.408 SKQuoteLib_RequestStocks (13 , MTX12)
+[15072] 2020/02/28 23:28:09.409 Divide StockNo {MTX12}
+[15072] 2020/02/28 23:28:09.409 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.409 Return PageNo¡G 13 
+[15072] 2020/02/28 23:28:09.409  SKQuoteLib_RequestTicks ( 14 , MX400 )
+[15072] 2020/02/28 23:28:09.409 SKQuoteLib_RequestFutureTradeInfo (14 , MX400)
+[15072] 2020/02/28 23:28:09.410 SKQuoteLib_RequestStocks (14 , MX400)
+[15072] 2020/02/28 23:28:09.410 Divide StockNo {MX400}
+[15072] 2020/02/28 23:28:09.410 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.410 Return PageNo¡G 14 
+[15072] 2020/02/28 23:28:09.410  SKQuoteLib_RequestTicks ( 15 , MX402 )
+[15072] 2020/02/28 23:28:09.411 SKQuoteLib_RequestFutureTradeInfo (15 , MX402)
+[15072] 2020/02/28 23:28:09.411 SKQuoteLib_RequestStocks (15 , MX402)
+[15072] 2020/02/28 23:28:09.411 Divide StockNo {MX402}
+[15072] 2020/02/28 23:28:09.411 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.411 Return PageNo¡G 15 
+[15072] 2020/02/28 23:28:09.412  SKQuoteLib_RequestTicks ( 16 , TE00 )
+[15072] 2020/02/28 23:28:09.412 SKQuoteLib_RequestFutureTradeInfo (16 , TE00)
+[15072] 2020/02/28 23:28:09.413 SKQuoteLib_RequestStocks (16 , TE00)
+[15072] 2020/02/28 23:28:09.413 Divide StockNo {TE00}
+[15072] 2020/02/28 23:28:09.413 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.413 Return PageNo¡G 16 
+[15072] 2020/02/28 23:28:09.414  SKQuoteLib_RequestTicks ( 17 , TE03 )
+[15072] 2020/02/28 23:28:09.414 SKQuoteLib_RequestFutureTradeInfo (17 , TE03)
+[15072] 2020/02/28 23:28:09.415 SKQuoteLib_RequestStocks (17 , TE03)
+[15072] 2020/02/28 23:28:09.415 Divide StockNo {TE03}
+[15072] 2020/02/28 23:28:09.415 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.415 Return PageNo¡G 17 
+[15072] 2020/02/28 23:28:09.415  SKQuoteLib_RequestTicks ( 18 , TE04 )
+[15072] 2020/02/28 23:28:09.416 SKQuoteLib_RequestFutureTradeInfo (18 , TE04)
+[15072] 2020/02/28 23:28:09.416 SKQuoteLib_RequestStocks (18 , TE04)
+[15072] 2020/02/28 23:28:09.416 Divide StockNo {TE04}
+[15072] 2020/02/28 23:28:09.416 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.416 Return PageNo¡G 18 
+[15072] 2020/02/28 23:28:09.417  SKQuoteLib_RequestTicks ( 19 , TE05 )
+[15072] 2020/02/28 23:28:09.417 SKQuoteLib_RequestFutureTradeInfo (19 , TE05)
+[15072] 2020/02/28 23:28:09.418 SKQuoteLib_RequestStocks (19 , TE05)
+[15072] 2020/02/28 23:28:09.418 Divide StockNo {TE05}
+[15072] 2020/02/28 23:28:09.418 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.418 Return PageNo¡G 19 
+[15072] 2020/02/28 23:28:09.418  SKQuoteLib_RequestTicks ( 20 , TE06 )
+[15072] 2020/02/28 23:28:09.419 SKQuoteLib_RequestFutureTradeInfo (20 , TE06)
+[15072] 2020/02/28 23:28:09.419 SKQuoteLib_RequestStocks (20 , TE06)
+[15072] 2020/02/28 23:28:09.419 Divide StockNo {TE06}
+[15072] 2020/02/28 23:28:09.419 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.419 Return PageNo¡G 20 
+[15072] 2020/02/28 23:28:09.419  SKQuoteLib_RequestTicks ( 21 , TE09 )
+[15072] 2020/02/28 23:28:09.420 SKQuoteLib_RequestFutureTradeInfo (21 , TE09)
+[15072] 2020/02/28 23:28:09.420 SKQuoteLib_RequestStocks (21 , TE09)
+[15072] 2020/02/28 23:28:09.420 Divide StockNo {TE09}
+[15072] 2020/02/28 23:28:09.420 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.420 Return PageNo¡G 21 
+[15072] 2020/02/28 23:28:09.421  SKQuoteLib_RequestTicks ( 22 , TE12 )
+[15072] 2020/02/28 23:28:09.421 SKQuoteLib_RequestFutureTradeInfo (22 , TE12)
+[15072] 2020/02/28 23:28:09.421 SKQuoteLib_RequestStocks (22 , TE12)
+[15072] 2020/02/28 23:28:09.421 Divide StockNo {TE12}
+[15072] 2020/02/28 23:28:09.422 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.422 Return PageNo¡G 22 
+[15072] 2020/02/28 23:28:09.422  SKQuoteLib_RequestTicks ( 23 , SP0000 )
+[15072] 2020/02/28 23:28:09.422 SKQuoteLib_RequestFutureTradeInfo (23 , SP0000)
+[15072] 2020/02/28 23:28:09.423 SKQuoteLib_RequestStocks (23 , SP0000)
+[15072] 2020/02/28 23:28:09.423 Divide StockNo {SP0000}
+[15072] 2020/02/28 23:28:09.423 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.423 Return PageNo¡G 23 
+[15072] 2020/02/28 23:28:09.423  SKQuoteLib_RequestTicks ( 24 , SP2003 )
+[15072] 2020/02/28 23:28:09.424 SKQuoteLib_RequestFutureTradeInfo (24 , SP2003)
+[15072] 2020/02/28 23:28:09.424 SKQuoteLib_RequestStocks (24 , SP2003)
+[15072] 2020/02/28 23:28:09.424 Divide StockNo {SP2003}
+[15072] 2020/02/28 23:28:09.424 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.424 Return PageNo¡G 24 
+[15072] 2020/02/28 23:28:09.425  SKQuoteLib_RequestTicks ( 25 , SP2006 )
+[15072] 2020/02/28 23:28:09.426 SKQuoteLib_RequestFutureTradeInfo (25 , SP2006)
+[15072] 2020/02/28 23:28:09.426 SKQuoteLib_RequestStocks (25 , SP2006)
+[15072] 2020/02/28 23:28:09.426 Divide StockNo {SP2006}
+[15072] 2020/02/28 23:28:09.426 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.426 Return PageNo¡G 25 
+[15072] 2020/02/28 23:28:09.427  SKQuoteLib_RequestTicks ( 26 , SP2009 )
+[15072] 2020/02/28 23:28:09.427 SKQuoteLib_RequestFutureTradeInfo (26 , SP2009)
+[15072] 2020/02/28 23:28:09.428 SKQuoteLib_RequestStocks (26 , SP2009)
+[15072] 2020/02/28 23:28:09.428 Divide StockNo {SP2009}
+[15072] 2020/02/28 23:28:09.428 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.428 Return PageNo¡G 26 
+[15072] 2020/02/28 23:28:09.428  SKQuoteLib_RequestTicks ( 27 , SP2012 )
+[15072] 2020/02/28 23:28:09.429 SKQuoteLib_RequestFutureTradeInfo (27 , SP2012)
+[15072] 2020/02/28 23:28:09.429 SKQuoteLib_RequestStocks (27 , SP2012)
+[15072] 2020/02/28 23:28:09.429 Divide StockNo {SP2012}
+[15072] 2020/02/28 23:28:09.429 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.429 Return PageNo¡G 27 
+[15072] 2020/02/28 23:28:09.430  SKQuoteLib_RequestTicks ( 28 , SP2103 )
+[15072] 2020/02/28 23:28:09.430 SKQuoteLib_RequestFutureTradeInfo (28 , SP2103)
+[15072] 2020/02/28 23:28:09.431 SKQuoteLib_RequestStocks (28 , SP2103)
+[15072] 2020/02/28 23:28:09.431 Divide StockNo {SP2103}
+[15072] 2020/02/28 23:28:09.431 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.431 Return PageNo¡G 28 
+[15072] 2020/02/28 23:28:09.431  SKQuoteLib_RequestTicks ( 29 , UD00 )
+[15072] 2020/02/28 23:28:09.431 SKQuoteLib_RequestFutureTradeInfo (29 , UD00)
+[15072] 2020/02/28 23:28:09.432 SKQuoteLib_RequestStocks (29 , UD00)
+[15072] 2020/02/28 23:28:09.432 Divide StockNo {UD00}
+[15072] 2020/02/28 23:28:09.432 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.432 Return PageNo¡G 29 
+[15072] 2020/02/28 23:28:09.432  SKQuoteLib_RequestTicks ( 30 , UD03 )
+[15072] 2020/02/28 23:28:09.433 SKQuoteLib_RequestFutureTradeInfo (30 , UD03)
+[15072] 2020/02/28 23:28:09.434 SKQuoteLib_RequestStocks (30 , UD03)
+[15072] 2020/02/28 23:28:09.434 Divide StockNo {UD03}
+[15072] 2020/02/28 23:28:09.434 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.434 Return PageNo¡G 30 
+[15072] 2020/02/28 23:28:09.434  SKQuoteLib_RequestTicks ( 31 , UD06 )
+[15072] 2020/02/28 23:28:09.434 SKQuoteLib_RequestFutureTradeInfo (31 , UD06)
+[15072] 2020/02/28 23:28:09.435 SKQuoteLib_RequestStocks (31 , UD06)
+[15072] 2020/02/28 23:28:09.435 Divide StockNo {UD06}
+[15072] 2020/02/28 23:28:09.435 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.435 Return PageNo¡G 31 
+[15072] 2020/02/28 23:28:09.437  SKQuoteLib_RequestTicks ( 32 , UD09 )
+[15072] 2020/02/28 23:28:09.437 SKQuoteLib_RequestFutureTradeInfo (32 , UD09)
+[15072] 2020/02/28 23:28:09.437 SKQuoteLib_RequestStocks (32 , UD09)
+[15072] 2020/02/28 23:28:09.437 Divide StockNo {UD09}
+[15072] 2020/02/28 23:28:09.437 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.437 Return PageNo¡G 32 
+[15072] 2020/02/28 23:28:09.438  SKQuoteLib_RequestTicks ( 33 , UD12 )
+[15072] 2020/02/28 23:28:09.438 SKQuoteLib_RequestFutureTradeInfo (33 , UD12)
+[15072] 2020/02/28 23:28:09.438 SKQuoteLib_RequestStocks (33 , UD12)
+[15072] 2020/02/28 23:28:09.439 Divide StockNo {UD12}
+[15072] 2020/02/28 23:28:09.439 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.439 Return PageNo¡G 33 
+[15072] 2020/02/28 23:28:09.439  SKQuoteLib_RequestTicks ( 34 , UN0000 )
+[15072] 2020/02/28 23:28:09.439 SKQuoteLib_RequestFutureTradeInfo (34 , UN0000)
+[15072] 2020/02/28 23:28:09.440 SKQuoteLib_RequestStocks (34 , UN0000)
+[15072] 2020/02/28 23:28:09.440 Divide StockNo {UN0000}
+[15072] 2020/02/28 23:28:09.440 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.440 Return PageNo¡G 34 
+[15072] 2020/02/28 23:28:09.440  SKQuoteLib_RequestTicks ( 35 , UN2003 )
+[15072] 2020/02/28 23:28:09.441 SKQuoteLib_RequestFutureTradeInfo (35 , UN2003)
+[15072] 2020/02/28 23:28:09.441 SKQuoteLib_RequestStocks (35 , UN2003)
+[15072] 2020/02/28 23:28:09.441 Divide StockNo {UN2003}
+[15072] 2020/02/28 23:28:09.441 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.441 Return PageNo¡G 35 
+[15072] 2020/02/28 23:28:09.442  SKQuoteLib_RequestTicks ( 36 , UN2006 )
+[15072] 2020/02/28 23:28:09.442 SKQuoteLib_RequestFutureTradeInfo (36 , UN2006)
+[15072] 2020/02/28 23:28:09.443 SKQuoteLib_RequestStocks (36 , UN2006)
+[15072] 2020/02/28 23:28:09.443 Divide StockNo {UN2006}
+[15072] 2020/02/28 23:28:09.443 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.443 Return PageNo¡G 36 
+[15072] 2020/02/28 23:28:09.443  SKQuoteLib_RequestTicks ( 37 , UN2009 )
+[15072] 2020/02/28 23:28:09.444 SKQuoteLib_RequestFutureTradeInfo (37 , UN2009)
+[15072] 2020/02/28 23:28:09.444 SKQuoteLib_RequestStocks (37 , UN2009)
+[15072] 2020/02/28 23:28:09.444 Divide StockNo {UN2009}
+[15072] 2020/02/28 23:28:09.444 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.444 Return PageNo¡G 37 
+[15072] 2020/02/28 23:28:09.445  SKQuoteLib_RequestTicks ( 38 , UN2012 )
+[15072] 2020/02/28 23:28:09.446 SKQuoteLib_RequestFutureTradeInfo (38 , UN2012)
+[15072] 2020/02/28 23:28:09.446 SKQuoteLib_RequestStocks (38 , UN2012)
+[15072] 2020/02/28 23:28:09.446 Divide StockNo {UN2012}
+[15072] 2020/02/28 23:28:09.446 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.446 Return PageNo¡G 38 
+[15072] 2020/02/28 23:28:09.447  SKQuoteLib_RequestTicks ( 39 , UN2103 )
+[15072] 2020/02/28 23:28:09.447 SKQuoteLib_RequestFutureTradeInfo (39 , UN2103)
+[15072] 2020/02/28 23:28:09.448 SKQuoteLib_RequestStocks (39 , UN2103)
+[15072] 2020/02/28 23:28:09.448 Divide StockNo {UN2103}
+[15072] 2020/02/28 23:28:09.448 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.448 Return PageNo¡G 39 
+[15072] 2020/02/28 23:28:09.448  SKQuoteLib_RequestTicks ( 40 , TF00 )
+[15072] 2020/02/28 23:28:09.449 SKQuoteLib_RequestFutureTradeInfo (40 , TF00)
+[15072] 2020/02/28 23:28:09.449 SKQuoteLib_RequestStocks (40 , TF00)
+[15072] 2020/02/28 23:28:09.449 Divide StockNo {TF00}
+[15072] 2020/02/28 23:28:09.449 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.449 Return PageNo¡G 40 
+[15072] 2020/02/28 23:28:09.449  SKQuoteLib_RequestTicks ( 41 , TF03 )
+[15072] 2020/02/28 23:28:09.450 SKQuoteLib_RequestFutureTradeInfo (41 , TF03)
+[15072] 2020/02/28 23:28:09.450 SKQuoteLib_RequestStocks (41 , TF03)
+[15072] 2020/02/28 23:28:09.450 Divide StockNo {TF03}
+[15072] 2020/02/28 23:28:09.450 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.450 Return PageNo¡G 41 
+[15072] 2020/02/28 23:28:09.451  SKQuoteLib_RequestTicks ( 42 , TF04 )
+[15072] 2020/02/28 23:28:09.451 SKQuoteLib_RequestFutureTradeInfo (42 , TF04)
+[15072] 2020/02/28 23:28:09.452 SKQuoteLib_RequestStocks (42 , TF04)
+[15072] 2020/02/28 23:28:09.452 Divide StockNo {TF04}
+[15072] 2020/02/28 23:28:09.452 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.452 Return PageNo¡G 42 
+[15072] 2020/02/28 23:28:09.452  SKQuoteLib_RequestTicks ( 43 , TF05 )
+[15072] 2020/02/28 23:28:09.453 SKQuoteLib_RequestFutureTradeInfo (43 , TF05)
+[15072] 2020/02/28 23:28:09.453 SKQuoteLib_RequestStocks (43 , TF05)
+[15072] 2020/02/28 23:28:09.453 Divide StockNo {TF05}
+[15072] 2020/02/28 23:28:09.453 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.453 Return PageNo¡G 43 
+[15072] 2020/02/28 23:28:09.453  SKQuoteLib_RequestTicks ( 44 , TF06 )
+[15072] 2020/02/28 23:28:09.454 SKQuoteLib_RequestFutureTradeInfo (44 , TF06)
+[15072] 2020/02/28 23:28:09.454 SKQuoteLib_RequestStocks (44 , TF06)
+[15072] 2020/02/28 23:28:09.454 Divide StockNo {TF06}
+[15072] 2020/02/28 23:28:09.454 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.454 Return PageNo¡G 44 
+[15072] 2020/02/28 23:28:09.455  SKQuoteLib_RequestTicks ( 45 , TF09 )
+[15072] 2020/02/28 23:28:09.455 SKQuoteLib_RequestFutureTradeInfo (45 , TF09)
+[15072] 2020/02/28 23:28:09.456 SKQuoteLib_RequestStocks (45 , TF09)
+[15072] 2020/02/28 23:28:09.456 Divide StockNo {TF09}
+[15072] 2020/02/28 23:28:09.456 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.456 Return PageNo¡G 45 
+[15072] 2020/02/28 23:28:09.456  SKQuoteLib_RequestTicks ( 46 , TF12 )
+[15072] 2020/02/28 23:28:09.457 SKQuoteLib_RequestFutureTradeInfo (46 , TF12)
+[15072] 2020/02/28 23:28:09.457 SKQuoteLib_RequestStocks (46 , TF12)
+[15072] 2020/02/28 23:28:09.457 Divide StockNo {TF12}
+[15072] 2020/02/28 23:28:09.457 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.457 Return PageNo¡G 46 
+[15072] 2020/02/28 23:28:09.458  SKQuoteLib_RequestTicks ( 47 , XI00 )
+[15072] 2020/02/28 23:28:09.458 SKQuoteLib_RequestFutureTradeInfo (47 , XI00)
+[15072] 2020/02/28 23:28:09.459 SKQuoteLib_RequestStocks (47 , XI00)
+[15072] 2020/02/28 23:28:09.459 Divide StockNo {XI00}
+[15072] 2020/02/28 23:28:09.459 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.459 Return PageNo¡G 47 
+[15072] 2020/02/28 23:28:09.459  SKQuoteLib_RequestTicks ( 48 , XI03 )
+[15072] 2020/02/28 23:28:09.460 SKQuoteLib_RequestFutureTradeInfo (48 , XI03)
+[15072] 2020/02/28 23:28:09.460 SKQuoteLib_RequestStocks (48 , XI03)
+[15072] 2020/02/28 23:28:09.460 Divide StockNo {XI03}
+[15072] 2020/02/28 23:28:09.460 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.460 Return PageNo¡G 48 
+[15072] 2020/02/28 23:28:09.461  SKQuoteLib_RequestTicks ( 49 , XI04 )
+[15072] 2020/02/28 23:28:09.461 SKQuoteLib_RequestFutureTradeInfo (49 , XI04)
+[15072] 2020/02/28 23:28:09.462 SKQuoteLib_RequestStocks (49 , XI04)
+[15072] 2020/02/28 23:28:09.462 Divide StockNo {XI04}
+[15072] 2020/02/28 23:28:09.462 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.462 Return PageNo¡G 49 
+[15072] 2020/02/28 23:28:09.462  SKQuoteLib_RequestTicks ( 50 , XI05 )
+[15072] 2020/02/28 23:28:09.463 SKQuoteLib_RequestFutureTradeInfo (50 , XI05)
+[15072] 2020/02/28 23:28:09.463 SKQuoteLib_RequestStocks (50 , XI05)
+[15072] 2020/02/28 23:28:09.463 Divide StockNo {XI05}
+[15072] 2020/02/28 23:28:09.463 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.463 Return PageNo¡G 50 
+[15072] 2020/02/28 23:28:09.464  SKQuoteLib_RequestTicks ( 51 , XI06 )
+[15072] 2020/02/28 23:28:09.464 SKQuoteLib_RequestFutureTradeInfo (51 , XI06)
+[15072] 2020/02/28 23:28:09.465 SKQuoteLib_RequestStocks (51 , XI06)
+[15072] 2020/02/28 23:28:09.465 Divide StockNo {XI06}
+[15072] 2020/02/28 23:28:09.465 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.465  SKQuoteLib_RequestTicks ( 52 , XI09 )
+[15072] 2020/02/28 23:28:09.465 SKQuoteLib_RequestFutureTradeInfo (52 , XI09)
+[15072] 2020/02/28 23:28:09.466 SKQuoteLib_RequestStocks (52 , XI09)
+[15072] 2020/02/28 23:28:09.466 Divide StockNo {XI09}
+[15072] 2020/02/28 23:28:09.466 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.467  SKQuoteLib_RequestTicks ( 53 , XI12 )
+[15072] 2020/02/28 23:28:09.467 SKQuoteLib_RequestFutureTradeInfo (53 , XI12)
+[15072] 2020/02/28 23:28:09.467 SKQuoteLib_RequestStocks (53 , XI12)
+[15072] 2020/02/28 23:28:09.467 Divide StockNo {XI12}
+[15072] 2020/02/28 23:28:09.467 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.468  SKQuoteLib_RequestTicks ( 54 , GT00 )
+[15072] 2020/02/28 23:28:09.468 SKQuoteLib_RequestFutureTradeInfo (54 , GT00)
+[15072] 2020/02/28 23:28:09.469 SKQuoteLib_RequestStocks (54 , GT00)
+[15072] 2020/02/28 23:28:09.469 Divide StockNo {GT00}
+[15072] 2020/02/28 23:28:09.469 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.469  SKQuoteLib_RequestTicks ( 55 , GT03 )
+[15072] 2020/02/28 23:28:09.469 SKQuoteLib_RequestFutureTradeInfo (55 , GT03)
+[15072] 2020/02/28 23:28:09.470 SKQuoteLib_RequestStocks (55 , GT03)
+[15072] 2020/02/28 23:28:09.470 Divide StockNo {GT03}
+[15072] 2020/02/28 23:28:09.470 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.470  SKQuoteLib_RequestTicks ( 56 , GT04 )
+[15072] 2020/02/28 23:28:09.471 SKQuoteLib_RequestFutureTradeInfo (56 , GT04)
+[15072] 2020/02/28 23:28:09.471 SKQuoteLib_RequestStocks (56 , GT04)
+[15072] 2020/02/28 23:28:09.471 Divide StockNo {GT04}
+[15072] 2020/02/28 23:28:09.471 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.472  SKQuoteLib_RequestTicks ( 57 , GT05 )
+[15072] 2020/02/28 23:28:09.472 SKQuoteLib_RequestFutureTradeInfo (57 , GT05)
+[15072] 2020/02/28 23:28:09.472 SKQuoteLib_RequestStocks (57 , GT05)
+[15072] 2020/02/28 23:28:09.472 Divide StockNo {GT05}
+[15072] 2020/02/28 23:28:09.472 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.473  SKQuoteLib_RequestTicks ( 58 , GT06 )
+[15072] 2020/02/28 23:28:09.473 SKQuoteLib_RequestFutureTradeInfo (58 , GT06)
+[15072] 2020/02/28 23:28:09.474 SKQuoteLib_RequestStocks (58 , GT06)
+[15072] 2020/02/28 23:28:09.474 Divide StockNo {GT06}
+[15072] 2020/02/28 23:28:09.474 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.475  SKQuoteLib_RequestTicks ( 59 , GT09 )
+[15072] 2020/02/28 23:28:09.475 SKQuoteLib_RequestFutureTradeInfo (59 , GT09)
+[15072] 2020/02/28 23:28:09.475 SKQuoteLib_RequestStocks (59 , GT09)
+[15072] 2020/02/28 23:28:09.475 Divide StockNo {GT09}
+[15072] 2020/02/28 23:28:09.475 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.476  SKQuoteLib_RequestTicks ( 60 , GT12 )
+[15072] 2020/02/28 23:28:09.476 SKQuoteLib_RequestFutureTradeInfo (60 , GT12)
+[15072] 2020/02/28 23:28:09.477 SKQuoteLib_RequestStocks (60 , GT12)
+[15072] 2020/02/28 23:28:09.477 Divide StockNo {GT12}
+[15072] 2020/02/28 23:28:09.477 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.478  SKQuoteLib_RequestTicks ( 61 , T500 )
+[15072] 2020/02/28 23:28:09.478 SKQuoteLib_RequestFutureTradeInfo (61 , T500)
+[15072] 2020/02/28 23:28:09.479 SKQuoteLib_RequestStocks (61 , T500)
+[15072] 2020/02/28 23:28:09.479 Divide StockNo {T500}
+[15072] 2020/02/28 23:28:09.479 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.479  SKQuoteLib_RequestTicks ( 62 , T503 )
+[15072] 2020/02/28 23:28:09.480 SKQuoteLib_RequestFutureTradeInfo (62 , T503)
+[15072] 2020/02/28 23:28:09.480 SKQuoteLib_RequestStocks (62 , T503)
+[15072] 2020/02/28 23:28:09.480 Divide StockNo {T503}
+[15072] 2020/02/28 23:28:09.480 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.480  SKQuoteLib_RequestTicks ( 63 , T504 )
+[15072] 2020/02/28 23:28:09.481 SKQuoteLib_RequestFutureTradeInfo (63 , T504)
+[15072] 2020/02/28 23:28:09.481 SKQuoteLib_RequestStocks (63 , T504)
+[15072] 2020/02/28 23:28:09.481 Divide StockNo {T504}
+[15072] 2020/02/28 23:28:09.481 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.482  SKQuoteLib_RequestTicks ( 64 , T505 )
+[15072] 2020/02/28 23:28:09.482 SKQuoteLib_RequestFutureTradeInfo (64 , T505)
+[15072] 2020/02/28 23:28:09.482 SKQuoteLib_RequestStocks (64 , T505)
+[15072] 2020/02/28 23:28:09.482 Divide StockNo {T505}
+[15072] 2020/02/28 23:28:09.483 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.483  SKQuoteLib_RequestTicks ( 65 , T506 )
+[15072] 2020/02/28 23:28:09.483 SKQuoteLib_RequestFutureTradeInfo (65 , T506)
+[15072] 2020/02/28 23:28:09.484 SKQuoteLib_RequestStocks (65 , T506)
+[15072] 2020/02/28 23:28:09.484 Divide StockNo {T506}
+[15072] 2020/02/28 23:28:09.484 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.484  SKQuoteLib_RequestTicks ( 66 , T509 )
+[15072] 2020/02/28 23:28:09.485 SKQuoteLib_RequestFutureTradeInfo (66 , T509)
+[15072] 2020/02/28 23:28:09.485 SKQuoteLib_RequestStocks (66 , T509)
+[15072] 2020/02/28 23:28:09.485 Divide StockNo {T509}
+[15072] 2020/02/28 23:28:09.485 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.486  SKQuoteLib_RequestTicks ( 67 , T512 )
+[15072] 2020/02/28 23:28:09.486 SKQuoteLib_RequestFutureTradeInfo (67 , T512)
+[15072] 2020/02/28 23:28:09.487 SKQuoteLib_RequestStocks (67 , T512)
+[15072] 2020/02/28 23:28:09.487 Divide StockNo {T512}
+[15072] 2020/02/28 23:28:09.487 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.487  SKQuoteLib_RequestTicks ( 68 , G20000 )
+[15072] 2020/02/28 23:28:09.488 SKQuoteLib_RequestFutureTradeInfo (68 , G20000)
+[15072] 2020/02/28 23:28:09.488 SKQuoteLib_RequestStocks (68 , G20000)
+[15072] 2020/02/28 23:28:09.488 Divide StockNo {G20000}
+[15072] 2020/02/28 23:28:09.488 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.489  SKQuoteLib_RequestTicks ( 69 , G22003 )
+[15072] 2020/02/28 23:28:09.489 SKQuoteLib_RequestFutureTradeInfo (69 , G22003)
+[15072] 2020/02/28 23:28:09.489 SKQuoteLib_RequestStocks (69 , G22003)
+[15072] 2020/02/28 23:28:09.489 Divide StockNo {G22003}
+[15072] 2020/02/28 23:28:09.490 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.490  SKQuoteLib_RequestTicks ( 70 , G22004 )
+[15072] 2020/02/28 23:28:09.490 SKQuoteLib_RequestFutureTradeInfo (70 , G22004)
+[15072] 2020/02/28 23:28:09.491 SKQuoteLib_RequestStocks (70 , G22004)
+[15072] 2020/02/28 23:28:09.491 Divide StockNo {G22004}
+[15072] 2020/02/28 23:28:09.491 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.492  SKQuoteLib_RequestTicks ( 71 , G22005 )
+[15072] 2020/02/28 23:28:09.492 SKQuoteLib_RequestFutureTradeInfo (71 , G22005)
+[15072] 2020/02/28 23:28:09.493 SKQuoteLib_RequestStocks (71 , G22005)
+[15072] 2020/02/28 23:28:09.493 Divide StockNo {G22005}
+[15072] 2020/02/28 23:28:09.493 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.493  SKQuoteLib_RequestTicks ( 72 , G22006 )
+[15072] 2020/02/28 23:28:09.493 SKQuoteLib_RequestFutureTradeInfo (72 , G22006)
+[15072] 2020/02/28 23:28:09.494 SKQuoteLib_RequestStocks (72 , G22006)
+[15072] 2020/02/28 23:28:09.494 Divide StockNo {G22006}
+[15072] 2020/02/28 23:28:09.494 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.494  SKQuoteLib_RequestTicks ( 73 , G22009 )
+[15072] 2020/02/28 23:28:09.495 SKQuoteLib_RequestFutureTradeInfo (73 , G22009)
+[15072] 2020/02/28 23:28:09.495 SKQuoteLib_RequestStocks (73 , G22009)
+[15072] 2020/02/28 23:28:09.495 Divide StockNo {G22009}
+[15072] 2020/02/28 23:28:09.495 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.496  SKQuoteLib_RequestTicks ( 74 , G22012 )
+[15072] 2020/02/28 23:28:09.496 SKQuoteLib_RequestFutureTradeInfo (74 , G22012)
+[15072] 2020/02/28 23:28:09.497 SKQuoteLib_RequestStocks (74 , G22012)
+[15072] 2020/02/28 23:28:09.497 Divide StockNo {G22012}
+[15072] 2020/02/28 23:28:09.497 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.497  SKQuoteLib_RequestTicks ( 75 , TJ00 )
+[15072] 2020/02/28 23:28:09.498 SKQuoteLib_RequestFutureTradeInfo (75 , TJ00)
+[15072] 2020/02/28 23:28:09.498 SKQuoteLib_RequestStocks (75 , TJ00)
+[15072] 2020/02/28 23:28:09.498 Divide StockNo {TJ00}
+[15072] 2020/02/28 23:28:09.498 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.498  SKQuoteLib_RequestTicks ( 76 , TJ03 )
+[15072] 2020/02/28 23:28:09.499 SKQuoteLib_RequestFutureTradeInfo (76 , TJ03)
+[15072] 2020/02/28 23:28:09.499 SKQuoteLib_RequestStocks (76 , TJ03)
+[15072] 2020/02/28 23:28:09.499 Divide StockNo {TJ03}
+[15072] 2020/02/28 23:28:09.499 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.500  SKQuoteLib_RequestTicks ( 77 , TJ04 )
+[15072] 2020/02/28 23:28:09.500 SKQuoteLib_RequestFutureTradeInfo (77 , TJ04)
+[15072] 2020/02/28 23:28:09.501 SKQuoteLib_RequestStocks (77 , TJ04)
+[15072] 2020/02/28 23:28:09.501 Divide StockNo {TJ04}
+[15072] 2020/02/28 23:28:09.501 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.501  SKQuoteLib_RequestTicks ( 78 , TJ06 )
+[15072] 2020/02/28 23:28:09.501 SKQuoteLib_RequestFutureTradeInfo (78 , TJ06)
+[15072] 2020/02/28 23:28:09.502 SKQuoteLib_RequestStocks (78 , TJ06)
+[15072] 2020/02/28 23:28:09.502 Divide StockNo {TJ06}
+[15072] 2020/02/28 23:28:09.502 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.502  SKQuoteLib_RequestTicks ( 79 , TJ09 )
+[15072] 2020/02/28 23:28:09.503 SKQuoteLib_RequestFutureTradeInfo (79 , TJ09)
+[15072] 2020/02/28 23:28:09.503 SKQuoteLib_RequestStocks (79 , TJ09)
+[15072] 2020/02/28 23:28:09.503 Divide StockNo {TJ09}
+[15072] 2020/02/28 23:28:09.503 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.504  SKQuoteLib_RequestTicks ( 80 , TJ12 )
+[15072] 2020/02/28 23:28:09.504 SKQuoteLib_RequestFutureTradeInfo (80 , TJ12)
+[15072] 2020/02/28 23:28:09.504 SKQuoteLib_RequestStocks (80 , TJ12)
+[15072] 2020/02/28 23:28:09.504 Divide StockNo {TJ12}
+[15072] 2020/02/28 23:28:09.504 Stock Not Exist 
+[15072] 2020/02/28 23:28:09.660 market(0)  Ready!
+[15072] 2020/02/28 23:28:09.698 market(2)  Ready!
+[15072] 2020/02/28 23:28:09.698 market(1)  Ready!
+[15072] 2020/02/28 23:28:09.709 market(2)  Ready!
+[15072] 2020/02/28 23:28:09.710 market(4)  Ready!
+[15072] 2020/02/28 23:28:09.715 market(3)  Ready!
+[15072] 2020/02/28 23:28:09.715 market(3)  Ready!
+[15072] 2020/02/28 23:28:10.380 Market Info is OK!
+[15072] 2020/02/28 23:28:10.466 Catalog info is OK!
+[15072] 2020/02/28 23:28:15.107  SKQuoteLib_RequestTicks ( 0 , TX00 )
+[15072] 2020/02/28 23:28:15.107 Return PageNo¡G 0 
+[15072] 2020/02/28 23:28:15.107 SKQuoteLib_RequestFutureTradeInfo (0 , TX00)
+[15072] 2020/02/28 23:28:15.107 FutureTradeInfo - MarketNo¡G2 StockIdx¡G0
+[15072] 2020/02/28 23:28:15.107 SKQuoteLib_RequestStocks (0 , TX00)
+[15072] 2020/02/28 23:28:15.107 Divide StockNo {TX00}
+[15072] 2020/02/28 23:28:15.107 Add Basket MarketNo¡G2 StockIdx¡G0
+[15072] 2020/02/28 23:28:15.108  SKQuoteLib_RequestTicks ( 1 , TX03 )
+[15072] 2020/02/28 23:28:15.108 Return PageNo¡G 1 
+[15072] 2020/02/28 23:28:15.109 SKQuoteLib_RequestFutureTradeInfo (1 , TX03)
+[15072] 2020/02/28 23:28:15.109 FutureTradeInfo - MarketNo¡G2 StockIdx¡G1
+[15072] 2020/02/28 23:28:15.109 SKQuoteLib_RequestStocks (1 , TX03)
+[15072] 2020/02/28 23:28:15.109 Divide StockNo {TX03}
+[15072] 2020/02/28 23:28:15.109 Add Basket MarketNo¡G2 StockIdx¡G1
+[15072] 2020/02/28 23:28:15.109  SKQuoteLib_RequestTicks ( 2 , TX04 )
+[15072] 2020/02/28 23:28:15.109 Return PageNo¡G 2 
+[15072] 2020/02/28 23:28:15.110 SKQuoteLib_RequestFutureTradeInfo (2 , TX04)
+[15072] 2020/02/28 23:28:15.110 FutureTradeInfo - MarketNo¡G2 StockIdx¡G2
+[15072] 2020/02/28 23:28:15.110 SKQuoteLib_RequestStocks (2 , TX04)
+[15072] 2020/02/28 23:28:15.110 Divide StockNo {TX04}
+[15072] 2020/02/28 23:28:15.110 Add Basket MarketNo¡G2 StockIdx¡G2
+[15072] 2020/02/28 23:28:15.111  SKQuoteLib_RequestTicks ( 3 , TX05 )
+[15072] 2020/02/28 23:28:15.111 Return PageNo¡G 3 
+[15072] 2020/02/28 23:28:15.111 SKQuoteLib_RequestFutureTradeInfo (3 , TX05)
+[15072] 2020/02/28 23:28:15.111 FutureTradeInfo - MarketNo¡G2 StockIdx¡G3
+[15072] 2020/02/28 23:28:15.111 SKQuoteLib_RequestStocks (3 , TX05)
+[15072] 2020/02/28 23:28:15.111 Divide StockNo {TX05}
+[15072] 2020/02/28 23:28:15.111 Add Basket MarketNo¡G2 StockIdx¡G3
+[15072] 2020/02/28 23:28:15.112  SKQuoteLib_RequestTicks ( 4 , TX06 )
+[15072] 2020/02/28 23:28:15.112 Return PageNo¡G 4 
+[15072] 2020/02/28 23:28:15.112 SKQuoteLib_RequestFutureTradeInfo (4 , TX06)
+[15072] 2020/02/28 23:28:15.112 FutureTradeInfo - MarketNo¡G2 StockIdx¡G4
+[15072] 2020/02/28 23:28:15.112 SKQuoteLib_RequestStocks (4 , TX06)
+[15072] 2020/02/28 23:28:15.112 Divide StockNo {TX06}
+[15072] 2020/02/28 23:28:15.112 Add Basket MarketNo¡G2 StockIdx¡G4
+[15072] 2020/02/28 23:28:15.113  SKQuoteLib_RequestTicks ( 5 , TX09 )
+[15072] 2020/02/28 23:28:15.113 Return PageNo¡G 5 
+[15072] 2020/02/28 23:28:15.113 SKQuoteLib_RequestFutureTradeInfo (5 , TX09)
+[15072] 2020/02/28 23:28:15.113 FutureTradeInfo - MarketNo¡G2 StockIdx¡G5
+[15072] 2020/02/28 23:28:15.114 SKQuoteLib_RequestStocks (5 , TX09)
+[15072] 2020/02/28 23:28:15.114 Divide StockNo {TX09}
+[15072] 2020/02/28 23:28:15.114 Add Basket MarketNo¡G2 StockIdx¡G5
+[15072] 2020/02/28 23:28:15.114  SKQuoteLib_RequestTicks ( 6 , TX12 )
+[15072] 2020/02/28 23:28:15.114 Return PageNo¡G 6 
+[15072] 2020/02/28 23:28:15.115 SKQuoteLib_RequestFutureTradeInfo (6 , TX12)
+[15072] 2020/02/28 23:28:15.115 FutureTradeInfo - MarketNo¡G2 StockIdx¡G6
+[15072] 2020/02/28 23:28:15.115 SKQuoteLib_RequestStocks (6 , TX12)
+[15072] 2020/02/28 23:28:15.115 Divide StockNo {TX12}
+[15072] 2020/02/28 23:28:15.115 Add Basket MarketNo¡G2 StockIdx¡G6
+[15072] 2020/02/28 23:28:15.115  SKQuoteLib_RequestTicks ( 7 , MTX00 )
+[15072] 2020/02/28 23:28:15.115 Return PageNo¡G 7 
+[15072] 2020/02/28 23:28:15.116 SKQuoteLib_RequestFutureTradeInfo (7 , MTX00)
+[15072] 2020/02/28 23:28:15.116 FutureTradeInfo - MarketNo¡G2 StockIdx¡G7
+[15072] 2020/02/28 23:28:15.116 SKQuoteLib_RequestStocks (7 , MTX00)
+[15072] 2020/02/28 23:28:15.116 Divide StockNo {MTX00}
+[15072] 2020/02/28 23:28:15.116 Add Basket MarketNo¡G2 StockIdx¡G7
+[15072] 2020/02/28 23:28:15.116  SKQuoteLib_RequestTicks ( 8 , MTX03 )
+[15072] 2020/02/28 23:28:15.116 Return PageNo¡G 8 
+[15072] 2020/02/28 23:28:15.117 SKQuoteLib_RequestFutureTradeInfo (8 , MTX03)
+[15072] 2020/02/28 23:28:15.117 FutureTradeInfo - MarketNo¡G2 StockIdx¡G8
+[15072] 2020/02/28 23:28:15.117 SKQuoteLib_RequestStocks (8 , MTX03)
+[15072] 2020/02/28 23:28:15.117 Divide StockNo {MTX03}
+[15072] 2020/02/28 23:28:15.117 Add Basket MarketNo¡G2 StockIdx¡G8
+[15072] 2020/02/28 23:28:15.118  SKQuoteLib_RequestTicks ( 9 , MTX04 )
+[15072] 2020/02/28 23:28:15.118 Return PageNo¡G 9 
+[15072] 2020/02/28 23:28:15.118 SKQuoteLib_RequestFutureTradeInfo (9 , MTX04)
+[15072] 2020/02/28 23:28:15.118 FutureTradeInfo - MarketNo¡G2 StockIdx¡G9
+[15072] 2020/02/28 23:28:15.118 SKQuoteLib_RequestStocks (9 , MTX04)
+[15072] 2020/02/28 23:28:15.118 Divide StockNo {MTX04}
+[15072] 2020/02/28 23:28:15.118 Add Basket MarketNo¡G2 StockIdx¡G9
+[15072] 2020/02/28 23:28:15.119  SKQuoteLib_RequestTicks ( 10 , MTX05 )
+[15072] 2020/02/28 23:28:15.119 Return PageNo¡G 10 
+[15072] 2020/02/28 23:28:15.119 SKQuoteLib_RequestFutureTradeInfo (10 , MTX05)
+[15072] 2020/02/28 23:28:15.119 FutureTradeInfo - MarketNo¡G2 StockIdx¡G10
+[15072] 2020/02/28 23:28:15.119 SKQuoteLib_RequestStocks (10 , MTX05)
+[15072] 2020/02/28 23:28:15.120 Divide StockNo {MTX05}
+[15072] 2020/02/28 23:28:15.120 Add Basket MarketNo¡G2 StockIdx¡G10
+[15072] 2020/02/28 23:28:15.120  SKQuoteLib_RequestTicks ( 11 , MTX06 )
+[15072] 2020/02/28 23:28:15.120 Return PageNo¡G 11 
+[15072] 2020/02/28 23:28:15.120 SKQuoteLib_RequestFutureTradeInfo (11 , MTX06)
+[15072] 2020/02/28 23:28:15.120 FutureTradeInfo - MarketNo¡G2 StockIdx¡G11
+[15072] 2020/02/28 23:28:15.121 SKQuoteLib_RequestStocks (11 , MTX06)
+[15072] 2020/02/28 23:28:15.121 Divide StockNo {MTX06}
+[15072] 2020/02/28 23:28:15.121 Add Basket MarketNo¡G2 StockIdx¡G11
+[15072] 2020/02/28 23:28:15.121  SKQuoteLib_RequestTicks ( 12 , MTX09 )
+[15072] 2020/02/28 23:28:15.121 Return PageNo¡G 12 
+[15072] 2020/02/28 23:28:15.121 SKQuoteLib_RequestFutureTradeInfo (12 , MTX09)
+[15072] 2020/02/28 23:28:15.121 FutureTradeInfo - MarketNo¡G2 StockIdx¡G12
+[15072] 2020/02/28 23:28:15.122 SKQuoteLib_RequestStocks (12 , MTX09)
+[15072] 2020/02/28 23:28:15.122 Divide StockNo {MTX09}
+[15072] 2020/02/28 23:28:15.122 Add Basket MarketNo¡G2 StockIdx¡G12
+[15072] 2020/02/28 23:28:15.122  SKQuoteLib_RequestTicks ( 13 , MTX12 )
+[15072] 2020/02/28 23:28:15.122 Return PageNo¡G 13 
+[15072] 2020/02/28 23:28:15.122 SKQuoteLib_RequestFutureTradeInfo (13 , MTX12)
+[15072] 2020/02/28 23:28:15.122 FutureTradeInfo - MarketNo¡G2 StockIdx¡G13
+[15072] 2020/02/28 23:28:15.123 SKQuoteLib_RequestStocks (13 , MTX12)
+[15072] 2020/02/28 23:28:15.123 Divide StockNo {MTX12}
+[15072] 2020/02/28 23:28:15.123 Add Basket MarketNo¡G2 StockIdx¡G13
+[15072] 2020/02/28 23:28:15.123  SKQuoteLib_RequestTicks ( 14 , MX400 )
+[15072] 2020/02/28 23:28:15.123 SKQuoteLib_RequestFutureTradeInfo (14 , MX400)
+[15072] 2020/02/28 23:28:15.124 SKQuoteLib_RequestStocks (14 , MX400)
+[15072] 2020/02/28 23:28:15.124 Divide StockNo {MX400}
+[15072] 2020/02/28 23:28:15.124 Stock Not Exist 
+[15072] 2020/02/28 23:28:15.124  SKQuoteLib_RequestTicks ( 15 , MX402 )
+[15072] 2020/02/28 23:28:15.125 SKQuoteLib_RequestFutureTradeInfo (15 , MX402)
+[15072] 2020/02/28 23:28:15.125 SKQuoteLib_RequestStocks (15 , MX402)
+[15072] 2020/02/28 23:28:15.125 Divide StockNo {MX402}
+[15072] 2020/02/28 23:28:15.125 Stock Not Exist 
+[15072] 2020/02/28 23:28:15.126  SKQuoteLib_RequestTicks ( 16 , TE00 )
+[15072] 2020/02/28 23:28:15.126 Return PageNo¡G 14 
+[15072] 2020/02/28 23:28:15.126 SKQuoteLib_RequestFutureTradeInfo (16 , TE00)
+[15072] 2020/02/28 23:28:15.126 FutureTradeInfo - MarketNo¡G2 StockIdx¡G16
+[15072] 2020/02/28 23:28:15.126 SKQuoteLib_RequestStocks (16 , TE00)
+[15072] 2020/02/28 23:28:15.126 Divide StockNo {TE00}
+[15072] 2020/02/28 23:28:15.126 Add Basket MarketNo¡G2 StockIdx¡G16
+[15072] 2020/02/28 23:28:15.127  SKQuoteLib_RequestTicks ( 17 , TE03 )
+[15072] 2020/02/28 23:28:15.127 Return PageNo¡G 15 
+[15072] 2020/02/28 23:28:15.127 SKQuoteLib_RequestFutureTradeInfo (17 , TE03)
+[15072] 2020/02/28 23:28:15.127 FutureTradeInfo - MarketNo¡G2 StockIdx¡G17
+[15072] 2020/02/28 23:28:15.127 SKQuoteLib_RequestStocks (17 , TE03)
+[15072] 2020/02/28 23:28:15.127 Divide StockNo {TE03}
+[15072] 2020/02/28 23:28:15.127 Add Basket MarketNo¡G2 StockIdx¡G17
+[15072] 2020/02/28 23:28:15.128  SKQuoteLib_RequestTicks ( 18 , TE04 )
+[15072] 2020/02/28 23:28:15.128 Return PageNo¡G 16 
+[15072] 2020/02/28 23:28:15.128 SKQuoteLib_RequestFutureTradeInfo (18 , TE04)
+[15072] 2020/02/28 23:28:15.128 FutureTradeInfo - MarketNo¡G2 StockIdx¡G18
+[15072] 2020/02/28 23:28:15.129 SKQuoteLib_RequestStocks (18 , TE04)
+[15072] 2020/02/28 23:28:15.129 Divide StockNo {TE04}
+[15072] 2020/02/28 23:28:15.129 Add Basket MarketNo¡G2 StockIdx¡G18
+[15072] 2020/02/28 23:28:15.129  SKQuoteLib_RequestTicks ( 19 , TE05 )
+[15072] 2020/02/28 23:28:15.129 Return PageNo¡G 17 
+[15072] 2020/02/28 23:28:15.130 SKQuoteLib_RequestFutureTradeInfo (19 , TE05)
+[15072] 2020/02/28 23:28:15.130 FutureTradeInfo - MarketNo¡G2 StockIdx¡G19
+[15072] 2020/02/28 23:28:15.130 SKQuoteLib_RequestStocks (19 , TE05)
+[15072] 2020/02/28 23:28:15.130 Divide StockNo {TE05}
+[15072] 2020/02/28 23:28:15.130 Add Basket MarketNo¡G2 StockIdx¡G19
+[15072] 2020/02/28 23:28:15.130  SKQuoteLib_RequestTicks ( 20 , TE06 )
+[15072] 2020/02/28 23:28:15.130 Return PageNo¡G 18 
+[15072] 2020/02/28 23:28:15.131 SKQuoteLib_RequestFutureTradeInfo (20 , TE06)
+[15072] 2020/02/28 23:28:15.131 FutureTradeInfo - MarketNo¡G2 StockIdx¡G20
+[15072] 2020/02/28 23:28:15.131 SKQuoteLib_RequestStocks (20 , TE06)
+[15072] 2020/02/28 23:28:15.131 Divide StockNo {TE06}
+[15072] 2020/02/28 23:28:15.131 Add Basket MarketNo¡G2 StockIdx¡G20
+[15072] 2020/02/28 23:28:15.131  SKQuoteLib_RequestTicks ( 21 , TE09 )
+[15072] 2020/02/28 23:28:15.131 Return PageNo¡G 19 
+[15072] 2020/02/28 23:28:15.132 SKQuoteLib_RequestFutureTradeInfo (21 , TE09)
+[15072] 2020/02/28 23:28:15.132 FutureTradeInfo - MarketNo¡G2 StockIdx¡G21
+[15072] 2020/02/28 23:28:15.132 SKQuoteLib_RequestStocks (21 , TE09)
+[15072] 2020/02/28 23:28:15.132 Divide StockNo {TE09}
+[15072] 2020/02/28 23:28:15.132 Add Basket MarketNo¡G2 StockIdx¡G21
+[15072] 2020/02/28 23:28:15.132  SKQuoteLib_RequestTicks ( 22 , TE12 )
+[15072] 2020/02/28 23:28:15.132 Return PageNo¡G 20 
+[15072] 2020/02/28 23:28:15.133 SKQuoteLib_RequestFutureTradeInfo (22 , TE12)
+[15072] 2020/02/28 23:28:15.133 FutureTradeInfo - MarketNo¡G2 StockIdx¡G22
+[15072] 2020/02/28 23:28:15.133 SKQuoteLib_RequestStocks (22 , TE12)
+[15072] 2020/02/28 23:28:15.133 Divide StockNo {TE12}
+[15072] 2020/02/28 23:28:15.133 Add Basket MarketNo¡G2 StockIdx¡G22
+[15072] 2020/02/28 23:28:15.133  SKQuoteLib_RequestTicks ( 23 , SP0000 )
+[15072] 2020/02/28 23:28:15.133 Return PageNo¡G 21 
+[15072] 2020/02/28 23:28:15.134 SKQuoteLib_RequestFutureTradeInfo (23 , SP0000)
+[15072] 2020/02/28 23:28:15.134 FutureTradeInfo - MarketNo¡G2 StockIdx¡G23
+[15072] 2020/02/28 23:28:15.134 SKQuoteLib_RequestStocks (23 , SP0000)
+[15072] 2020/02/28 23:28:15.134 Divide StockNo {SP0000}
+[15072] 2020/02/28 23:28:15.134 Add Basket MarketNo¡G2 StockIdx¡G23
+[15072] 2020/02/28 23:28:15.134  SKQuoteLib_RequestTicks ( 24 , SP2003 )
+[15072] 2020/02/28 23:28:15.134 Return PageNo¡G 22 
+[15072] 2020/02/28 23:28:15.135 SKQuoteLib_RequestFutureTradeInfo (24 , SP2003)
+[15072] 2020/02/28 23:28:15.135 FutureTradeInfo - MarketNo¡G2 StockIdx¡G24
+[15072] 2020/02/28 23:28:15.135 SKQuoteLib_RequestStocks (24 , SP2003)
+[15072] 2020/02/28 23:28:15.135 Divide StockNo {SP2003}
+[15072] 2020/02/28 23:28:15.135 Add Basket MarketNo¡G2 StockIdx¡G24
+[15072] 2020/02/28 23:28:15.135  SKQuoteLib_RequestTicks ( 25 , SP2006 )
+[15072] 2020/02/28 23:28:15.135 Return PageNo¡G 23 
+[15072] 2020/02/28 23:28:15.136 SKQuoteLib_RequestFutureTradeInfo (25 , SP2006)
+[15072] 2020/02/28 23:28:15.136 FutureTradeInfo - MarketNo¡G2 StockIdx¡G25
+[15072] 2020/02/28 23:28:15.136 SKQuoteLib_RequestStocks (25 , SP2006)
+[15072] 2020/02/28 23:28:15.136 Divide StockNo {SP2006}
+[15072] 2020/02/28 23:28:15.136 Add Basket MarketNo¡G2 StockIdx¡G25
+[15072] 2020/02/28 23:28:15.136  SKQuoteLib_RequestTicks ( 26 , SP2009 )
+[15072] 2020/02/28 23:28:15.136 Return PageNo¡G 24 
+[15072] 2020/02/28 23:28:15.137 SKQuoteLib_RequestFutureTradeInfo (26 , SP2009)
+[15072] 2020/02/28 23:28:15.137 FutureTradeInfo - MarketNo¡G2 StockIdx¡G26
+[15072] 2020/02/28 23:28:15.137 SKQuoteLib_RequestStocks (26 , SP2009)
+[15072] 2020/02/28 23:28:15.137 Divide StockNo {SP2009}
+[15072] 2020/02/28 23:28:15.137 Add Basket MarketNo¡G2 StockIdx¡G26
+[15072] 2020/02/28 23:28:15.138  SKQuoteLib_RequestTicks ( 27 , SP2012 )
+[15072] 2020/02/28 23:28:15.138 Return PageNo¡G 25 
+[15072] 2020/02/28 23:28:15.138 SKQuoteLib_RequestFutureTradeInfo (27 , SP2012)
+[15072] 2020/02/28 23:28:15.138 FutureTradeInfo - MarketNo¡G2 StockIdx¡G27
+[15072] 2020/02/28 23:28:15.138 SKQuoteLib_RequestStocks (27 , SP2012)
+[15072] 2020/02/28 23:28:15.138 Divide StockNo {SP2012}
+[15072] 2020/02/28 23:28:15.138 Add Basket MarketNo¡G2 StockIdx¡G27
+[15072] 2020/02/28 23:28:15.139  SKQuoteLib_RequestTicks ( 28 , SP2103 )
+[15072] 2020/02/28 23:28:15.139 Return PageNo¡G 26 
+[15072] 2020/02/28 23:28:15.139 SKQuoteLib_RequestFutureTradeInfo (28 , SP2103)
+[15072] 2020/02/28 23:28:15.139 FutureTradeInfo - MarketNo¡G2 StockIdx¡G28
+[15072] 2020/02/28 23:28:15.139 SKQuoteLib_RequestStocks (28 , SP2103)
+[15072] 2020/02/28 23:28:15.139 Divide StockNo {SP2103}
+[15072] 2020/02/28 23:28:15.139 Add Basket MarketNo¡G2 StockIdx¡G28
+[15072] 2020/02/28 23:28:15.140  SKQuoteLib_RequestTicks ( 29 , UD00 )
+[15072] 2020/02/28 23:28:15.140 Return PageNo¡G 27 
+[15072] 2020/02/28 23:28:15.140 SKQuoteLib_RequestFutureTradeInfo (29 , UD00)
+[15072] 2020/02/28 23:28:15.140 FutureTradeInfo - MarketNo¡G2 StockIdx¡G29
+[15072] 2020/02/28 23:28:15.140 SKQuoteLib_RequestStocks (29 , UD00)
+[15072] 2020/02/28 23:28:15.140 Divide StockNo {UD00}
+[15072] 2020/02/28 23:28:15.140 Add Basket MarketNo¡G2 StockIdx¡G29
+[15072] 2020/02/28 23:28:15.141  SKQuoteLib_RequestTicks ( 30 , UD03 )
+[15072] 2020/02/28 23:28:15.141 Return PageNo¡G 28 
+[15072] 2020/02/28 23:28:15.141 SKQuoteLib_RequestFutureTradeInfo (30 , UD03)
+[15072] 2020/02/28 23:28:15.141 FutureTradeInfo - MarketNo¡G2 StockIdx¡G30
+[15072] 2020/02/28 23:28:15.142 SKQuoteLib_RequestStocks (30 , UD03)
+[15072] 2020/02/28 23:28:15.142 Divide StockNo {UD03}
+[15072] 2020/02/28 23:28:15.142 Add Basket MarketNo¡G2 StockIdx¡G30
+[15072] 2020/02/28 23:28:15.142  SKQuoteLib_RequestTicks ( 31 , UD06 )
+[15072] 2020/02/28 23:28:15.142 Return PageNo¡G 29 
+[15072] 2020/02/28 23:28:15.143 SKQuoteLib_RequestFutureTradeInfo (31 , UD06)
+[15072] 2020/02/28 23:28:15.143 FutureTradeInfo - MarketNo¡G2 StockIdx¡G31
+[15072] 2020/02/28 23:28:15.143 SKQuoteLib_RequestStocks (31 , UD06)
+[15072] 2020/02/28 23:28:15.143 Divide StockNo {UD06}
+[15072] 2020/02/28 23:28:15.143 Add Basket MarketNo¡G2 StockIdx¡G31
+[15072] 2020/02/28 23:28:15.143  SKQuoteLib_RequestTicks ( 32 , UD09 )
+[15072] 2020/02/28 23:28:15.143 Return PageNo¡G 30 
+[15072] 2020/02/28 23:28:15.144 SKQuoteLib_RequestFutureTradeInfo (32 , UD09)
+[15072] 2020/02/28 23:28:15.144 FutureTradeInfo - MarketNo¡G2 StockIdx¡G32
+[15072] 2020/02/28 23:28:15.144 SKQuoteLib_RequestStocks (32 , UD09)
+[15072] 2020/02/28 23:28:15.144 Divide StockNo {UD09}
+[15072] 2020/02/28 23:28:15.144 Add Basket MarketNo¡G2 StockIdx¡G32
+[15072] 2020/02/28 23:28:15.145  SKQuoteLib_RequestTicks ( 33 , UD12 )
+[15072] 2020/02/28 23:28:15.145 Return PageNo¡G 31 
+[15072] 2020/02/28 23:28:15.145 SKQuoteLib_RequestFutureTradeInfo (33 , UD12)
+[15072] 2020/02/28 23:28:15.145 FutureTradeInfo - MarketNo¡G2 StockIdx¡G33
+[15072] 2020/02/28 23:28:15.145 SKQuoteLib_RequestStocks (33 , UD12)
+[15072] 2020/02/28 23:28:15.145 Divide StockNo {UD12}
+[15072] 2020/02/28 23:28:15.145 Add Basket MarketNo¡G2 StockIdx¡G33
+[15072] 2020/02/28 23:28:15.146  SKQuoteLib_RequestTicks ( 34 , UN0000 )
+[15072] 2020/02/28 23:28:15.146 Return PageNo¡G 32 
+[15072] 2020/02/28 23:28:15.146 SKQuoteLib_RequestFutureTradeInfo (34 , UN0000)
+[15072] 2020/02/28 23:28:15.146 FutureTradeInfo - MarketNo¡G2 StockIdx¡G34
+[15072] 2020/02/28 23:28:15.147 SKQuoteLib_RequestStocks (34 , UN0000)
+[15072] 2020/02/28 23:28:15.147 Divide StockNo {UN0000}
+[15072] 2020/02/28 23:28:15.147 Add Basket MarketNo¡G2 StockIdx¡G34
+[15072] 2020/02/28 23:28:15.147  SKQuoteLib_RequestTicks ( 35 , UN2003 )
+[15072] 2020/02/28 23:28:15.147 Return PageNo¡G 33 
+[15072] 2020/02/28 23:28:15.148 SKQuoteLib_RequestFutureTradeInfo (35 , UN2003)
+[15072] 2020/02/28 23:28:15.148 FutureTradeInfo - MarketNo¡G2 StockIdx¡G35
+[15072] 2020/02/28 23:28:15.148 SKQuoteLib_RequestStocks (35 , UN2003)
+[15072] 2020/02/28 23:28:15.148 Divide StockNo {UN2003}
+[15072] 2020/02/28 23:28:15.148 Add Basket MarketNo¡G2 StockIdx¡G35
+[15072] 2020/02/28 23:28:15.148  SKQuoteLib_RequestTicks ( 36 , UN2006 )
+[15072] 2020/02/28 23:28:15.148 Return PageNo¡G 34 
+[15072] 2020/02/28 23:28:15.150 SKQuoteLib_RequestFutureTradeInfo (36 , UN2006)
+[15072] 2020/02/28 23:28:15.150 FutureTradeInfo - MarketNo¡G2 StockIdx¡G36
+[15072] 2020/02/28 23:28:15.150 SKQuoteLib_RequestStocks (36 , UN2006)
+[15072] 2020/02/28 23:28:15.150 Divide StockNo {UN2006}
+[15072] 2020/02/28 23:28:15.150 Add Basket MarketNo¡G2 StockIdx¡G36
+[15072] 2020/02/28 23:28:15.151  SKQuoteLib_RequestTicks ( 37 , UN2009 )
+[15072] 2020/02/28 23:28:15.151 Return PageNo¡G 35 
+[15072] 2020/02/28 23:28:15.151 SKQuoteLib_RequestFutureTradeInfo (37 , UN2009)
+[15072] 2020/02/28 23:28:15.151 FutureTradeInfo - MarketNo¡G2 StockIdx¡G37
+[15072] 2020/02/28 23:28:15.151 SKQuoteLib_RequestStocks (37 , UN2009)
+[15072] 2020/02/28 23:28:15.151 Divide StockNo {UN2009}
+[15072] 2020/02/28 23:28:15.151 Add Basket MarketNo¡G2 StockIdx¡G37
+[15072] 2020/02/28 23:28:15.152  SKQuoteLib_RequestTicks ( 38 , UN2012 )
+[15072] 2020/02/28 23:28:15.152 Return PageNo¡G 36 
+[15072] 2020/02/28 23:28:15.152 SKQuoteLib_RequestFutureTradeInfo (38 , UN2012)
+[15072] 2020/02/28 23:28:15.152 FutureTradeInfo - MarketNo¡G2 StockIdx¡G38
+[15072] 2020/02/28 23:28:15.152 SKQuoteLib_RequestStocks (38 , UN2012)
+[15072] 2020/02/28 23:28:15.152 Divide StockNo {UN2012}
+[15072] 2020/02/28 23:28:15.152 Add Basket MarketNo¡G2 StockIdx¡G38
+[15072] 2020/02/28 23:28:15.153  SKQuoteLib_RequestTicks ( 39 , UN2103 )
+[15072] 2020/02/28 23:28:15.153 Return PageNo¡G 37 
+[15072] 2020/02/28 23:28:15.153 SKQuoteLib_RequestFutureTradeInfo (39 , UN2103)
+[15072] 2020/02/28 23:28:15.153 FutureTradeInfo - MarketNo¡G2 StockIdx¡G39
+[15072] 2020/02/28 23:28:15.153 SKQuoteLib_RequestStocks (39 , UN2103)
+[15072] 2020/02/28 23:28:15.153 Divide StockNo {UN2103}
+[15072] 2020/02/28 23:28:15.153 Add Basket MarketNo¡G2 StockIdx¡G39
+[15072] 2020/02/28 23:28:15.154  SKQuoteLib_RequestTicks ( 40 , TF00 )
+[15072] 2020/02/28 23:28:15.154 Return PageNo¡G 38 
+[15072] 2020/02/28 23:28:15.154 SKQuoteLib_RequestFutureTradeInfo (40 , TF00)
+[15072] 2020/02/28 23:28:15.154 FutureTradeInfo - MarketNo¡G2 StockIdx¡G288
+[15072] 2020/02/28 23:28:15.154 SKQuoteLib_RequestStocks (40 , TF00)
+[15072] 2020/02/28 23:28:15.154 Divide StockNo {TF00}
+[15072] 2020/02/28 23:28:15.154 Add Basket MarketNo¡G2 StockIdx¡G288
+[15072] 2020/02/28 23:28:15.155  SKQuoteLib_RequestTicks ( 41 , TF03 )
+[15072] 2020/02/28 23:28:15.155 Return PageNo¡G 39 
+[15072] 2020/02/28 23:28:15.155 SKQuoteLib_RequestFutureTradeInfo (41 , TF03)
+[15072] 2020/02/28 23:28:15.155 FutureTradeInfo - MarketNo¡G2 StockIdx¡G289
+[15072] 2020/02/28 23:28:15.156 SKQuoteLib_RequestStocks (41 , TF03)
+[15072] 2020/02/28 23:28:15.156 Divide StockNo {TF03}
+[15072] 2020/02/28 23:28:15.156 Add Basket MarketNo¡G2 StockIdx¡G289
+[15072] 2020/02/28 23:28:15.156  SKQuoteLib_RequestTicks ( 42 , TF04 )
+[15072] 2020/02/28 23:28:15.156 Return PageNo¡G 40 
+[15072] 2020/02/28 23:28:15.156 SKQuoteLib_RequestFutureTradeInfo (42 , TF04)
+[15072] 2020/02/28 23:28:15.156 FutureTradeInfo - MarketNo¡G2 StockIdx¡G290
+[15072] 2020/02/28 23:28:15.157 SKQuoteLib_RequestStocks (42 , TF04)
+[15072] 2020/02/28 23:28:15.157 Divide StockNo {TF04}
+[15072] 2020/02/28 23:28:15.157 Add Basket MarketNo¡G2 StockIdx¡G290
+[15072] 2020/02/28 23:28:15.157  SKQuoteLib_RequestTicks ( 43 , TF05 )
+[15072] 2020/02/28 23:28:15.157 Return PageNo¡G 41 
+[15072] 2020/02/28 23:28:15.157 SKQuoteLib_RequestFutureTradeInfo (43 , TF05)
+[15072] 2020/02/28 23:28:15.157 FutureTradeInfo - MarketNo¡G2 StockIdx¡G291
+[15072] 2020/02/28 23:28:15.158 SKQuoteLib_RequestStocks (43 , TF05)
+[15072] 2020/02/28 23:28:15.158 Divide StockNo {TF05}
+[15072] 2020/02/28 23:28:15.158 Add Basket MarketNo¡G2 StockIdx¡G291
+[15072] 2020/02/28 23:28:15.158  SKQuoteLib_RequestTicks ( 44 , TF06 )
+[15072] 2020/02/28 23:28:15.158 Return PageNo¡G 42 
+[15072] 2020/02/28 23:28:15.159 SKQuoteLib_RequestFutureTradeInfo (44 , TF06)
+[15072] 2020/02/28 23:28:15.159 FutureTradeInfo - MarketNo¡G2 StockIdx¡G292
+[15072] 2020/02/28 23:28:15.159 SKQuoteLib_RequestStocks (44 , TF06)
+[15072] 2020/02/28 23:28:15.159 Divide StockNo {TF06}
+[15072] 2020/02/28 23:28:15.159 Add Basket MarketNo¡G2 StockIdx¡G292
+[15072] 2020/02/28 23:28:15.159  SKQuoteLib_RequestTicks ( 45 , TF09 )
+[15072] 2020/02/28 23:28:15.160 Return PageNo¡G 43 
+[15072] 2020/02/28 23:28:15.160 SKQuoteLib_RequestFutureTradeInfo (45 , TF09)
+[15072] 2020/02/28 23:28:15.160 FutureTradeInfo - MarketNo¡G2 StockIdx¡G293
+[15072] 2020/02/28 23:28:15.160 SKQuoteLib_RequestStocks (45 , TF09)
+[15072] 2020/02/28 23:28:15.160 Divide StockNo {TF09}
+[15072] 2020/02/28 23:28:15.160 Add Basket MarketNo¡G2 StockIdx¡G293
+[15072] 2020/02/28 23:28:15.161  SKQuoteLib_RequestTicks ( 46 , TF12 )
+[15072] 2020/02/28 23:28:15.161 Return PageNo¡G 44 
+[15072] 2020/02/28 23:28:15.161 SKQuoteLib_RequestFutureTradeInfo (46 , TF12)
+[15072] 2020/02/28 23:28:15.161 FutureTradeInfo - MarketNo¡G2 StockIdx¡G294
+[15072] 2020/02/28 23:28:15.161 SKQuoteLib_RequestStocks (46 , TF12)
+[15072] 2020/02/28 23:28:15.161 Divide StockNo {TF12}
+[15072] 2020/02/28 23:28:15.161 Add Basket MarketNo¡G2 StockIdx¡G294
+[15072] 2020/02/28 23:28:15.162  SKQuoteLib_RequestTicks ( 47 , XI00 )
+[15072] 2020/02/28 23:28:15.162 Return PageNo¡G 45 
+[15072] 2020/02/28 23:28:15.162 SKQuoteLib_RequestFutureTradeInfo (47 , XI00)
+[15072] 2020/02/28 23:28:15.162 FutureTradeInfo - MarketNo¡G2 StockIdx¡G295
+[15072] 2020/02/28 23:28:15.162 SKQuoteLib_RequestStocks (47 , XI00)
+[15072] 2020/02/28 23:28:15.162 Divide StockNo {XI00}
+[15072] 2020/02/28 23:28:15.162 Add Basket MarketNo¡G2 StockIdx¡G295
+[15072] 2020/02/28 23:28:15.163  SKQuoteLib_RequestTicks ( 48 , XI03 )
+[15072] 2020/02/28 23:28:15.163 Return PageNo¡G 46 
+[15072] 2020/02/28 23:28:15.163 SKQuoteLib_RequestFutureTradeInfo (48 , XI03)
+[15072] 2020/02/28 23:28:15.163 FutureTradeInfo - MarketNo¡G2 StockIdx¡G296
+[15072] 2020/02/28 23:28:15.163 SKQuoteLib_RequestStocks (48 , XI03)
+[15072] 2020/02/28 23:28:15.163 Divide StockNo {XI03}
+[15072] 2020/02/28 23:28:15.163 Add Basket MarketNo¡G2 StockIdx¡G296
+[15072] 2020/02/28 23:28:15.164  SKQuoteLib_RequestTicks ( 49 , XI04 )
+[15072] 2020/02/28 23:28:15.164 Return PageNo¡G 47 
+[15072] 2020/02/28 23:28:15.164 SKQuoteLib_RequestFutureTradeInfo (49 , XI04)
+[15072] 2020/02/28 23:28:15.164 FutureTradeInfo - MarketNo¡G2 StockIdx¡G297
+[15072] 2020/02/28 23:28:15.164 SKQuoteLib_RequestStocks (49 , XI04)
+[15072] 2020/02/28 23:28:15.164 Divide StockNo {XI04}
+[15072] 2020/02/28 23:28:15.164 Add Basket MarketNo¡G2 StockIdx¡G297
+[15072] 2020/02/28 23:28:15.165  SKQuoteLib_RequestTicks ( 50 , XI05 )
+[15072] 2020/02/28 23:28:15.165 Return PageNo¡G 50 
+[15072] 2020/02/28 23:28:15.165 SKQuoteLib_RequestFutureTradeInfo (50 , XI05)
+[15072] 2020/02/28 23:28:15.165 FutureTradeInfo - MarketNo¡G2 StockIdx¡G298
+[15072] 2020/02/28 23:28:15.166 SKQuoteLib_RequestStocks (50 , XI05)
+[15072] 2020/02/28 23:28:15.166 Divide StockNo {XI05}
+[15072] 2020/02/28 23:28:15.166 Add Basket MarketNo¡G2 StockIdx¡G298
+[15072] 2020/02/28 23:28:15.166  SKQuoteLib_RequestTicks ( 51 , XI06 )
+[15072] 2020/02/28 23:28:15.166 Return PageNo¡G 48 
+[15072] 2020/02/28 23:28:15.166 SKQuoteLib_RequestFutureTradeInfo (51 , XI06)
+[15072] 2020/02/28 23:28:15.166 FutureTradeInfo - MarketNo¡G2 StockIdx¡G299
+[15072] 2020/02/28 23:28:15.167 SKQuoteLib_RequestStocks (51 , XI06)
+[15072] 2020/02/28 23:28:15.167 Divide StockNo {XI06}
+[15072] 2020/02/28 23:28:15.167 Add Basket MarketNo¡G2 StockIdx¡G299
+[15072] 2020/02/28 23:28:15.167  SKQuoteLib_RequestTicks ( 52 , XI09 )
+[15072] 2020/02/28 23:28:15.167 Return PageNo¡G 49 
+[15072] 2020/02/28 23:28:15.167 SKQuoteLib_RequestFutureTradeInfo (52 , XI09)
+[15072] 2020/02/28 23:28:15.167 FutureTradeInfo - MarketNo¡G2 StockIdx¡G300
+[15072] 2020/02/28 23:28:15.168 SKQuoteLib_RequestStocks (52 , XI09)
+[15072] 2020/02/28 23:28:15.168 Divide StockNo {XI09}
+[15072] 2020/02/28 23:28:15.168 Add Basket MarketNo¡G2 StockIdx¡G300
+[15072] 2020/02/28 23:28:15.168  SKQuoteLib_RequestTicks ( 53 , XI12 )
+[15072] 2020/02/28 23:28:15.168 SKQuoteLib_RequestFutureTradeInfo (53 , XI12)
+[15072] 2020/02/28 23:28:15.168 FutureTradeInfo - MarketNo¡G2 StockIdx¡G301
+[15072] 2020/02/28 23:28:15.169 SKQuoteLib_RequestStocks (53 , XI12)
+[15072] 2020/02/28 23:28:15.169 Divide StockNo {XI12}
+[15072] 2020/02/28 23:28:15.169 Add Basket MarketNo¡G2 StockIdx¡G301
+[15072] 2020/02/28 23:28:15.169  SKQuoteLib_RequestTicks ( 54 , GT00 )
+[15072] 2020/02/28 23:28:15.169 SKQuoteLib_RequestFutureTradeInfo (54 , GT00)
+[15072] 2020/02/28 23:28:15.169 FutureTradeInfo - MarketNo¡G2 StockIdx¡G302
+[15072] 2020/02/28 23:28:15.170 SKQuoteLib_RequestStocks (54 , GT00)
+[15072] 2020/02/28 23:28:15.170 Divide StockNo {GT00}
+[15072] 2020/02/28 23:28:15.170 Add Basket MarketNo¡G2 StockIdx¡G302
+[15072] 2020/02/28 23:28:15.170  SKQuoteLib_RequestTicks ( 55 , GT03 )
+[15072] 2020/02/28 23:28:15.170 SKQuoteLib_RequestFutureTradeInfo (55 , GT03)
+[15072] 2020/02/28 23:28:15.170 FutureTradeInfo - MarketNo¡G2 StockIdx¡G303
+[15072] 2020/02/28 23:28:15.171 SKQuoteLib_RequestStocks (55 , GT03)
+[15072] 2020/02/28 23:28:15.171 Divide StockNo {GT03}
+[15072] 2020/02/28 23:28:15.171 Add Basket MarketNo¡G2 StockIdx¡G303
+[15072] 2020/02/28 23:28:15.171  SKQuoteLib_RequestTicks ( 56 , GT04 )
+[15072] 2020/02/28 23:28:15.171 SKQuoteLib_RequestFutureTradeInfo (56 , GT04)
+[15072] 2020/02/28 23:28:15.171 FutureTradeInfo - MarketNo¡G2 StockIdx¡G304
+[15072] 2020/02/28 23:28:15.172 SKQuoteLib_RequestStocks (56 , GT04)
+[15072] 2020/02/28 23:28:15.172 Divide StockNo {GT04}
+[15072] 2020/02/28 23:28:15.172 Add Basket MarketNo¡G2 StockIdx¡G304
+[15072] 2020/02/28 23:28:15.172  SKQuoteLib_RequestTicks ( 57 , GT05 )
+[15072] 2020/02/28 23:28:15.172 SKQuoteLib_RequestFutureTradeInfo (57 , GT05)
+[15072] 2020/02/28 23:28:15.172 FutureTradeInfo - MarketNo¡G2 StockIdx¡G305
+[15072] 2020/02/28 23:28:15.173 SKQuoteLib_RequestStocks (57 , GT05)
+[15072] 2020/02/28 23:28:15.173 Divide StockNo {GT05}
+[15072] 2020/02/28 23:28:15.173 Add Basket MarketNo¡G2 StockIdx¡G305
+[15072] 2020/02/28 23:28:15.173  SKQuoteLib_RequestTicks ( 58 , GT06 )
+[15072] 2020/02/28 23:28:15.174 SKQuoteLib_RequestFutureTradeInfo (58 , GT06)
+[15072] 2020/02/28 23:28:15.174 FutureTradeInfo - MarketNo¡G2 StockIdx¡G306
+[15072] 2020/02/28 23:28:15.174 SKQuoteLib_RequestStocks (58 , GT06)
+[15072] 2020/02/28 23:28:15.174 Divide StockNo {GT06}
+[15072] 2020/02/28 23:28:15.174 Add Basket MarketNo¡G2 StockIdx¡G306
+[15072] 2020/02/28 23:28:15.174  SKQuoteLib_RequestTicks ( 59 , GT09 )
+[15072] 2020/02/28 23:28:15.175 SKQuoteLib_RequestFutureTradeInfo (59 , GT09)
+[15072] 2020/02/28 23:28:15.175 FutureTradeInfo - MarketNo¡G2 StockIdx¡G307
+[15072] 2020/02/28 23:28:15.175 SKQuoteLib_RequestStocks (59 , GT09)
+[15072] 2020/02/28 23:28:15.175 Divide StockNo {GT09}
+[15072] 2020/02/28 23:28:15.175 Add Basket MarketNo¡G2 StockIdx¡G307
+[15072] 2020/02/28 23:28:15.176  SKQuoteLib_RequestTicks ( 60 , GT12 )
+[15072] 2020/02/28 23:28:15.176 SKQuoteLib_RequestFutureTradeInfo (60 , GT12)
+[15072] 2020/02/28 23:28:15.176 FutureTradeInfo - MarketNo¡G2 StockIdx¡G308
+[15072] 2020/02/28 23:28:15.177 SKQuoteLib_RequestStocks (60 , GT12)
+[15072] 2020/02/28 23:28:15.177 Divide StockNo {GT12}
+[15072] 2020/02/28 23:28:15.177 Add Basket MarketNo¡G2 StockIdx¡G308
+[15072] 2020/02/28 23:28:15.177  SKQuoteLib_RequestTicks ( 61 , T500 )
+[15072] 2020/02/28 23:28:15.177 SKQuoteLib_RequestFutureTradeInfo (61 , T500)
+[15072] 2020/02/28 23:28:15.177 FutureTradeInfo - MarketNo¡G2 StockIdx¡G309
+[15072] 2020/02/28 23:28:15.178 SKQuoteLib_RequestStocks (61 , T500)
+[15072] 2020/02/28 23:28:15.178 Divide StockNo {T500}
+[15072] 2020/02/28 23:28:15.178 Add Basket MarketNo¡G2 StockIdx¡G309
+[15072] 2020/02/28 23:28:15.178  SKQuoteLib_RequestTicks ( 62 , T503 )
+[15072] 2020/02/28 23:28:15.178 SKQuoteLib_RequestFutureTradeInfo (62 , T503)
+[15072] 2020/02/28 23:28:15.178 FutureTradeInfo - MarketNo¡G2 StockIdx¡G310
+[15072] 2020/02/28 23:28:15.179 SKQuoteLib_RequestStocks (62 , T503)
+[15072] 2020/02/28 23:28:15.179 Divide StockNo {T503}
+[15072] 2020/02/28 23:28:15.179 Add Basket MarketNo¡G2 StockIdx¡G310
+[15072] 2020/02/28 23:28:15.179  SKQuoteLib_RequestTicks ( 63 , T504 )
+[15072] 2020/02/28 23:28:15.179 SKQuoteLib_RequestFutureTradeInfo (63 , T504)
+[15072] 2020/02/28 23:28:15.179 FutureTradeInfo - MarketNo¡G2 StockIdx¡G311
+[15072] 2020/02/28 23:28:15.180 SKQuoteLib_RequestStocks (63 , T504)
+[15072] 2020/02/28 23:28:15.180 Divide StockNo {T504}
+[15072] 2020/02/28 23:28:15.180 Add Basket MarketNo¡G2 StockIdx¡G311
+[15072] 2020/02/28 23:28:15.180  SKQuoteLib_RequestTicks ( 64 , T505 )
+[15072] 2020/02/28 23:28:15.180 SKQuoteLib_RequestFutureTradeInfo (64 , T505)
+[15072] 2020/02/28 23:28:15.180 FutureTradeInfo - MarketNo¡G2 StockIdx¡G312
+[15072] 2020/02/28 23:28:15.181 SKQuoteLib_RequestStocks (64 , T505)
+[15072] 2020/02/28 23:28:15.181 Divide StockNo {T505}
+[15072] 2020/02/28 23:28:15.181 Add Basket MarketNo¡G2 StockIdx¡G312
+[15072] 2020/02/28 23:28:15.181  SKQuoteLib_RequestTicks ( 65 , T506 )
+[15072] 2020/02/28 23:28:15.181 SKQuoteLib_RequestFutureTradeInfo (65 , T506)
+[15072] 2020/02/28 23:28:15.182 FutureTradeInfo - MarketNo¡G2 StockIdx¡G313
+[15072] 2020/02/28 23:28:15.182 SKQuoteLib_RequestStocks (65 , T506)
+[15072] 2020/02/28 23:28:15.182 Divide StockNo {T506}
+[15072] 2020/02/28 23:28:15.182 Add Basket MarketNo¡G2 StockIdx¡G313
+[15072] 2020/02/28 23:28:15.182  SKQuoteLib_RequestTicks ( 66 , T509 )
+[15072] 2020/02/28 23:28:15.182 SKQuoteLib_RequestFutureTradeInfo (66 , T509)
+[15072] 2020/02/28 23:28:15.183 FutureTradeInfo - MarketNo¡G2 StockIdx¡G314
+[15072] 2020/02/28 23:28:15.183 SKQuoteLib_RequestStocks (66 , T509)
+[15072] 2020/02/28 23:28:15.183 Divide StockNo {T509}
+[15072] 2020/02/28 23:28:15.183 Add Basket MarketNo¡G2 StockIdx¡G314
+[15072] 2020/02/28 23:28:15.183  SKQuoteLib_RequestTicks ( 67 , T512 )
+[15072] 2020/02/28 23:28:15.184 SKQuoteLib_RequestFutureTradeInfo (67 , T512)
+[15072] 2020/02/28 23:28:15.184 FutureTradeInfo - MarketNo¡G2 StockIdx¡G315
+[15072] 2020/02/28 23:28:15.184 SKQuoteLib_RequestStocks (67 , T512)
+[15072] 2020/02/28 23:28:15.184 Divide StockNo {T512}
+[15072] 2020/02/28 23:28:15.184 Add Basket MarketNo¡G2 StockIdx¡G315
+[15072] 2020/02/28 23:28:15.184  SKQuoteLib_RequestTicks ( 68 , G20000 )
+[15072] 2020/02/28 23:28:15.185 SKQuoteLib_RequestFutureTradeInfo (68 , G20000)
+[15072] 2020/02/28 23:28:15.185 FutureTradeInfo - MarketNo¡G2 StockIdx¡G316
+[15072] 2020/02/28 23:28:15.185 SKQuoteLib_RequestStocks (68 , G20000)
+[15072] 2020/02/28 23:28:15.185 Divide StockNo {G20000}
+[15072] 2020/02/28 23:28:15.185 Add Basket MarketNo¡G2 StockIdx¡G316
+[15072] 2020/02/28 23:28:15.185  SKQuoteLib_RequestTicks ( 69 , G22003 )
+[15072] 2020/02/28 23:28:15.186 SKQuoteLib_RequestFutureTradeInfo (69 , G22003)
+[15072] 2020/02/28 23:28:15.186 FutureTradeInfo - MarketNo¡G2 StockIdx¡G317
+[15072] 2020/02/28 23:28:15.186 SKQuoteLib_RequestStocks (69 , G22003)
+[15072] 2020/02/28 23:28:15.186 Divide StockNo {G22003}
+[15072] 2020/02/28 23:28:15.186 Add Basket MarketNo¡G2 StockIdx¡G317
+[15072] 2020/02/28 23:28:15.186  SKQuoteLib_RequestTicks ( 70 , G22004 )
+[15072] 2020/02/28 23:28:15.186 SKQuoteLib_RequestFutureTradeInfo (70 , G22004)
+[15072] 2020/02/28 23:28:15.187 FutureTradeInfo - MarketNo¡G2 StockIdx¡G318
+[15072] 2020/02/28 23:28:15.187 SKQuoteLib_RequestStocks (70 , G22004)
+[15072] 2020/02/28 23:28:15.187 Divide StockNo {G22004}
+[15072] 2020/02/28 23:28:15.187 Add Basket MarketNo¡G2 StockIdx¡G318
+[15072] 2020/02/28 23:28:15.187  SKQuoteLib_RequestTicks ( 71 , G22005 )
+[15072] 2020/02/28 23:28:15.190 SKQuoteLib_RequestFutureTradeInfo (71 , G22005)
+[15072] 2020/02/28 23:28:15.190 FutureTradeInfo - MarketNo¡G2 StockIdx¡G319
+[15072] 2020/02/28 23:28:15.190 SKQuoteLib_RequestStocks (71 , G22005)
+[15072] 2020/02/28 23:28:15.190 Divide StockNo {G22005}
+[15072] 2020/02/28 23:28:15.190 Add Basket MarketNo¡G2 StockIdx¡G319
+[15072] 2020/02/28 23:28:15.191  SKQuoteLib_RequestTicks ( 72 , G22006 )
+[15072] 2020/02/28 23:28:15.191 SKQuoteLib_RequestFutureTradeInfo (72 , G22006)
+[15072] 2020/02/28 23:28:15.191 FutureTradeInfo - MarketNo¡G2 StockIdx¡G320
+[15072] 2020/02/28 23:28:15.192 SKQuoteLib_RequestStocks (72 , G22006)
+[15072] 2020/02/28 23:28:15.192 Divide StockNo {G22006}
+[15072] 2020/02/28 23:28:15.192 Add Basket MarketNo¡G2 StockIdx¡G320
+[15072] 2020/02/28 23:28:15.192  SKQuoteLib_RequestTicks ( 73 , G22009 )
+[15072] 2020/02/28 23:28:15.193 SKQuoteLib_RequestFutureTradeInfo (73 , G22009)
+[15072] 2020/02/28 23:28:15.193 FutureTradeInfo - MarketNo¡G2 StockIdx¡G321
+[15072] 2020/02/28 23:28:15.193 SKQuoteLib_RequestStocks (73 , G22009)
+[15072] 2020/02/28 23:28:15.193 Divide StockNo {G22009}
+[15072] 2020/02/28 23:28:15.193 Add Basket MarketNo¡G2 StockIdx¡G321
+[15072] 2020/02/28 23:28:15.194  SKQuoteLib_RequestTicks ( 74 , G22012 )
+[15072] 2020/02/28 23:28:15.194 SKQuoteLib_RequestFutureTradeInfo (74 , G22012)
+[15072] 2020/02/28 23:28:15.194 FutureTradeInfo - MarketNo¡G2 StockIdx¡G322
+[15072] 2020/02/28 23:28:15.194 SKQuoteLib_RequestStocks (74 , G22012)
+[15072] 2020/02/28 23:28:15.194 Divide StockNo {G22012}
+[15072] 2020/02/28 23:28:15.194 Add Basket MarketNo¡G2 StockIdx¡G322
+[15072] 2020/02/28 23:28:15.195  SKQuoteLib_RequestTicks ( 75 , TJ00 )
+[15072] 2020/02/28 23:28:15.195 SKQuoteLib_RequestFutureTradeInfo (75 , TJ00)
+[15072] 2020/02/28 23:28:15.195 FutureTradeInfo - MarketNo¡G2 StockIdx¡G329
+[15072] 2020/02/28 23:28:15.195 SKQuoteLib_RequestStocks (75 , TJ00)
+[15072] 2020/02/28 23:28:15.195 Divide StockNo {TJ00}
+[15072] 2020/02/28 23:28:15.195 Add Basket MarketNo¡G2 StockIdx¡G329
+[15072] 2020/02/28 23:28:15.196  SKQuoteLib_RequestTicks ( 76 , TJ03 )
+[15072] 2020/02/28 23:28:15.196 SKQuoteLib_RequestFutureTradeInfo (76 , TJ03)
+[15072] 2020/02/28 23:28:15.196 FutureTradeInfo - MarketNo¡G2 StockIdx¡G330
+[15072] 2020/02/28 23:28:15.196 SKQuoteLib_RequestStocks (76 , TJ03)
+[15072] 2020/02/28 23:28:15.196 Divide StockNo {TJ03}
+[15072] 2020/02/28 23:28:15.196 Add Basket MarketNo¡G2 StockIdx¡G330
+[15072] 2020/02/28 23:28:15.197  SKQuoteLib_RequestTicks ( 77 , TJ04 )
+[15072] 2020/02/28 23:28:15.197 SKQuoteLib_RequestFutureTradeInfo (77 , TJ04)
+[15072] 2020/02/28 23:28:15.197 FutureTradeInfo - MarketNo¡G2 StockIdx¡G331
+[15072] 2020/02/28 23:28:15.198 SKQuoteLib_RequestStocks (77 , TJ04)
+[15072] 2020/02/28 23:28:15.198 Divide StockNo {TJ04}
+[15072] 2020/02/28 23:28:15.198 Add Basket MarketNo¡G2 StockIdx¡G331
+[15072] 2020/02/28 23:28:15.198  SKQuoteLib_RequestTicks ( 78 , TJ06 )
+[15072] 2020/02/28 23:28:15.198 SKQuoteLib_RequestFutureTradeInfo (78 , TJ06)
+[15072] 2020/02/28 23:28:15.198 FutureTradeInfo - MarketNo¡G2 StockIdx¡G332
+[15072] 2020/02/28 23:28:15.199 SKQuoteLib_RequestStocks (78 , TJ06)
+[15072] 2020/02/28 23:28:15.199 Divide StockNo {TJ06}
+[15072] 2020/02/28 23:28:15.199 Add Basket MarketNo¡G2 StockIdx¡G332
+[15072] 2020/02/28 23:28:15.199  SKQuoteLib_RequestTicks ( 79 , TJ09 )
+[15072] 2020/02/28 23:28:15.199 SKQuoteLib_RequestFutureTradeInfo (79 , TJ09)
+[15072] 2020/02/28 23:28:15.199 FutureTradeInfo - MarketNo¡G2 StockIdx¡G333
+[15072] 2020/02/28 23:28:15.200 SKQuoteLib_RequestStocks (79 , TJ09)
+[15072] 2020/02/28 23:28:15.200 Divide StockNo {TJ09}
+[15072] 2020/02/28 23:28:15.200 Add Basket MarketNo¡G2 StockIdx¡G333
+[15072] 2020/02/28 23:28:15.200  SKQuoteLib_RequestTicks ( 80 , TJ12 )
+[15072] 2020/02/28 23:28:15.200 SKQuoteLib_RequestFutureTradeInfo (80 , TJ12)
+[15072] 2020/02/28 23:28:15.200 FutureTradeInfo - MarketNo¡G2 StockIdx¡G334
+[15072] 2020/02/28 23:28:15.201 SKQuoteLib_RequestStocks (80 , TJ12)
+[15072] 2020/02/28 23:28:15.201 Divide StockNo {TJ12}
+[15072] 2020/02/28 23:28:15.201 Add Basket MarketNo¡G2 StockIdx¡G334
+[16356] 2020/02/28 23:51:19.125 SKQuoteLib_EnterMonitor IP¡Gsrvsolace-fg.capital.com.tw
+[16356] 2020/02/28 23:51:19.178 OnSessionConnect¡ACode: 0
+[16356] 2020/02/28 23:51:19.312 market(0)  Ready!
+[16356] 2020/02/28 23:51:19.321 market(1)  Ready!
+[16356] 2020/02/28 23:51:19.327 market(4)  Ready!
+[16356] 2020/02/28 23:51:19.327 market(2)  Ready!
+[16356] 2020/02/28 23:51:19.335 market(3)  Ready!
+[16356] 2020/02/28 23:51:19.335 market(3)  Ready!
+[16356] 2020/02/28 23:51:19.335 market(2)  Ready!
+[16356] 2020/02/28 23:51:19.636 Market Info is OK!
+[16356] 2020/02/28 23:51:19.731 Catalog info is OK!
+[16356] 2020/02/28 23:51:28.815 SKQuoteLib_RequestStocks (0 , TX00,MTX00,TF00)
+[16356] 2020/02/28 23:51:28.815 Divide StockNo {TX00}
+[16356] 2020/02/28 23:51:28.815 Add Basket MarketNo¡G2 StockIdx¡G0
+[16356] 2020/02/28 23:51:28.815 Divide StockNo {MTX00}
+[16356] 2020/02/28 23:51:28.815 Add Basket MarketNo¡G2 StockIdx¡G7
+[16356] 2020/02/28 23:51:28.815 Divide StockNo {TF00}
+[16356] 2020/02/28 23:51:28.815 Add Basket MarketNo¡G2 StockIdx¡G288
+[16356] 2020/02/28 23:51:28.815 Return PageNo¡G 1 
+[16356] 2020/02/28 23:52:46.357 SKQuoteLib_RequestStocks (1 , TX00,MTX00,TF00)
+[16356] 2020/02/28 23:52:46.357 Divide StockNo {TX00}
+[16356] 2020/02/28 23:52:46.357 Add Basket MarketNo¡G2 StockIdx¡G0
+[16356] 2020/02/28 23:52:46.357 Divide StockNo {MTX00}
+[16356] 2020/02/28 23:52:46.357 Add Basket MarketNo¡G2 StockIdx¡G7
+[16356] 2020/02/28 23:52:46.357 Divide StockNo {TF00}
+[16356] 2020/02/28 23:52:46.357 Add Basket MarketNo¡G2 StockIdx¡G288
+[16356] 2020/02/28 23:52:46.357 Return PageNo¡G 1 
+[16356] 2020/02/28 23:52:54.539 -----------------------------------------------------------------
+[16356] 2020/02/28 23:53:21.516 SKQuoteLib_RequestServerTime()
