@@ -47,12 +47,12 @@ class CAP_Thread(threading.Thread):
 			self.parent.get_price(self,pStock.bstrStockNo,pStock.nOpen/math.pow(10,pStock.sDecimal),pStock.nHigh/math.pow(10,pStock.sDecimal),pStock.nLow/math.pow(10,pStock.sDecimal),pStock.nClose/math.pow(10,pStock.sDecimal),pStock.nTQty)
 
 		
-	def __init__(self,tid,tpw,log,stock_code,price_data,tick_data,market_data,thread_id=0):
+	def __init__(self,tid,tpw,log,stock_code,price_data,tick_data,market_data,thread_id=0,redis_host='localhost'):
 		threading.Thread.__init__(self)
 		import json
 		import redis   #使用python来操作redis用法详解  https://www.jianshu.com/p/2639549bedc8 导入redis模块，通过python操作redis 也可以直接在redis主机的服务端操作缓存数据库
 		#cache = redis.Redis(host='localhost', port=6379, decode_responses=True)   # host是redis主机，需要redis服务端和客户端都启动 redis默认端口是6379
-		pool = redis.ConnectionPool(host='localhost', port=6379, decode_responses=True,max_connections=100)
+		pool = redis.ConnectionPool(host=redis_host, port=6379, decode_responses=True,max_connections=100)
 		self.cache = redis.Redis(connection_pool=pool)
 		
 		self.tid=thread_id
@@ -121,8 +121,8 @@ class CAP_Thread(threading.Thread):
 			self.log.info("[5]RequestTradeInfo,", self.skQ.SKQuoteLib_RequestFutureTradeInfo(ctypes.c_short(p),fc),"tid:",self.tid)
 			p+=1
 
-	def filelog(self,file,data):
-		print(data,file=file,sep=",")
+	def filelog(self,file,data,log_on=False):
+		if log_on==True :	print(data,file=file,sep=",")
 
 
 	def get_tick(self,sMarketNo, sStockIdx, nPtr, lDate, lTimehms, lTimemillismicros, nBid, nAsk, nClose, nQty, nSimulate):

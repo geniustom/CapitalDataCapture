@@ -1,5 +1,5 @@
 .DS_Store
-_getpass.py
+_*.py
 *.pyc
 log/*
 data/*

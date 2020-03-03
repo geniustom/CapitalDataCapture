@@ -1,4 +1,4 @@
-import _getpass as getpass
+import _config as conf
 import lib.util as lu
 import lib.quote as lq
 import pythoncom,time,datetime
@@ -17,13 +17,15 @@ if __name__ == '__main__':
 	lu.Beep([80,20,80,20],120)
 	
 	#輸入身分證與密碼
-	Id=getpass.getpass(prompt='ID= ')
-	Pw=getpass.getpass(prompt='PW= ')
+	Id=conf.getpass(prompt='ID= ')
+	Pw=conf.getpass(prompt='PW= ')
+	RedisHost=conf.get_redis_host()
+	print('Redis host:',RedisHost)
 	tid=0
 	
 	while True:
 		tick_data,price_data,market_data,stock_code=init()
-		t1=lq.CAP_Thread(Id,Pw,log,stock_code,price_data,tick_data,market_data,thread_id=tid)
+		t1=lq.CAP_Thread(Id,Pw,log,stock_code,price_data,tick_data,market_data,thread_id=tid,redis_host=RedisHost)
 		t1.start()
 		while t1.is_alive(deadline=10000):
 			time.sleep(0.0001)
