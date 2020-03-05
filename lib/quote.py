@@ -47,17 +47,19 @@ class CAP_Thread(threading.Thread):
 			self.parent.get_price(self,pStock.bstrStockNo,pStock.nOpen/math.pow(10,pStock.sDecimal),pStock.nHigh/math.pow(10,pStock.sDecimal),pStock.nLow/math.pow(10,pStock.sDecimal),pStock.nClose/math.pow(10,pStock.sDecimal),pStock.nTQty)
 
 		
-	def __init__(self,tid,tpw,log,stock_code,price_data,tick_data,market_data,thread_id=0,redis_host='localhost'):
+	def __init__(self,tid,tpw,log,stock_code,price_data,tick_data,market_data,thread_id=0,redis_host='localhost',from_idx=0,to_idx=0):
 		threading.Thread.__init__(self)
 		import json
 		import redis   #使用python来操作redis用法详解  https://www.jianshu.com/p/2639549bedc8 导入redis模块，通过python操作redis 也可以直接在redis主机的服务端操作缓存数据库
 		#cache = redis.Redis(host='localhost', port=6379, decode_responses=True)   # host是redis主机，需要redis服务端和客户端都启动 redis默认端口是6379
-		pool = redis.ConnectionPool(host=redis_host, port=6379, decode_responses=True,max_connections=100)
+		pool = redis.ConnectionPool(host=redis_host, port=6379, decode_responses=True,max_connections=50)
 		self.cache = redis.Redis(connection_pool=pool)
 		
 		self.tid=thread_id
 		self.stock_list=[]
 		self.stock_code = json.load(stock_code)
+		if (from_idx!=0) or (to_idx!=0):
+			self.stock_code=self.stock_code[from_idx:min(len(self.stock_code),to_idx)]
 		self.stock_dict={}
 		self.best5_dict={}
 		self.best5_id_dict={}
@@ -99,7 +101,7 @@ class CAP_Thread(threading.Thread):
 		
 
 	def step2(self): #收取量價資訊
-		pagelen=30
+		pagelen=50
 		part=math.floor( len(self.stock_code)/pagelen)
 		for p in range(part):
 			quote_list=','.join(self.stock_code[p*pagelen:p*pagelen+pagelen])	 

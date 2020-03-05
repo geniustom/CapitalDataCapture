@@ -1,7 +1,7 @@
 #REF: https://easontseng.blogspot.com/2017/
 # -*- coding: utf-8 -*-
 import lib.util as lu
-import _getpass as getpass
+import _config as conf
 import pythoncom, time, os,threading
 import comtypes.client as cc
 from datetime import datetime,date
@@ -176,8 +176,8 @@ if __name__ == '__main__':
 	log = lu.Logger(level='crit')
 
 	#輸入身分證與密碼
-	Id=getpass.getpass(prompt='ID= ')
-	Pw=getpass.getpass(prompt='PW= ')
+	Id=conf.getpass(prompt='ID= ')
+	Pw=conf.getpass(prompt='PW= ')
 	
 	t1=CAP_Thread(Id,Pw,log) 
 	t1.start()
