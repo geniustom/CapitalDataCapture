@@ -23,8 +23,8 @@ if __name__ == '__main__':
 	print('Redis host:',RedisHost)
 	tid=0
 	
-	from_idx=0 if len(sys.argv)!=3 else sys.argv[1]
-	to_idx=0 if len(sys.argv)!=3 else sys.argv[2]
+	from_idx=0 if len(sys.argv)!=3 else int(sys.argv[1])
+	to_idx=0 if len(sys.argv)!=3 else int(sys.argv[2])
 	
 	while True:
 		tick_data,price_data,market_data,stock_code=init()

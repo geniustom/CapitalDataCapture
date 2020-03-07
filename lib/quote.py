@@ -168,19 +168,29 @@ class CAP_Thread(threading.Thread):
 		#self.log.info(sMarketNo,sStockidx,nBuyTotalCount,nSellTotalCount,nBuyTotalQty,nSellTotalQty,nBuyDealTotalCount,nSellDealTotalCount,bstrStockNo)
 		#寫入log檔
 		if (bstrStockNo in self.stock_dict) and (bstrStockNo in self.best5_dict):
-			data=self.stock_dict[bstrStockNo]
-			############ set market info ############
+			############ set trade info ############
 			self.cache.hmset(redis_key,{'Market':bstrStockNo,'Date':in_date,'Time':api_time,'InTime':in_time,'TimsStamp':api_timestamp,
 								  'nBuyTotalQty':nBuyTotalQty,'nSellTotalQty':nSellTotalQty,'nBuyTotalCount':nBuyTotalCount,'nSellTotalCount':nSellTotalCount,
 								  'nBuyDealTotalCount':nBuyDealTotalCount,'nSellDealTotalCount':nSellDealTotalCount,
-								  'PriceTime':data[1],'nOpen':data[2],'nHigh':data[3],'nLow':data[4],'nClose':data[5],'nTQty':data[6]
 								  })
+			############ check time info ############
+			pt,bt=self.cache.hmget(redis_key,'PriceTime','Best5Time')
+			############ set market info ############
+			data=self.stock_dict[bstrStockNo]
+			if pt==None: pt='00:00:00'
+			#print(time.strftime(data[1]) , time.strftime(t))
+			if time.strftime(data[1]) > time.strftime(pt):
+				self.cache.hmset(redis_key,{'PriceTime':data[1],'nOpen':data[2],'nHigh':data[3],'nLow':data[4],'nClose':data[5],'nTQty':data[6] })
+			
 			############ set best5 info ############
 			data=self.best5_dict[bstrStockNo]
-			self.cache.hmset(redis_key,{'Best5Time':data[0],
-							   'nBestBid1':data[1],'nBestBidQty1':data[2],'nBestBid2':data[3],'nBestBidQty2':data[4],'nBestBid3':data[5],'nBestBidQty3':data[6],'nBestBid4':data[7],'nBestBidQty4':data[8],'nBestBid5':data[9],'nBestBidQty5':data[10],'nExtendBid':data[11],'nExtendBidQty':data[12],
-							   'nBestAsk1':data[13],'nBestAskQty1':data[14],'nBestAsk2':data[15],'nBestAskQty2':data[16],'nBestAsk3':data[17],'nBestAskQty3':data[18],'nBestAsk4':data[19],'nBestAskQty4':data[20],'nBestAsk5':data[21],'nBestAskQty5':data[22],'nExtendAsk':data[23],'nExtendAskQty':data[24],'nSimulate':data[25]
-							   })
+			if bt==None: bt='00:00:00'
+			#print(time.strftime(data[0]) , time.strftime(t))
+			if time.strftime(data[0]) > time.strftime(bt):
+				self.cache.hmset(redis_key,{'Best5Time':data[0],
+								   'nBestBid1':data[1],'nBestBidQty1':data[2],'nBestBid2':data[3],'nBestBidQty2':data[4],'nBestBid3':data[5],'nBestBidQty3':data[6],'nBestBid4':data[7],'nBestBidQty4':data[8],'nBestBid5':data[9],'nBestBidQty5':data[10],'nExtendBid':data[11],'nExtendBidQty':data[12],
+								   'nBestAsk1':data[13],'nBestAskQty1':data[14],'nBestAsk2':data[15],'nBestAskQty2':data[16],'nBestAsk3':data[17],'nBestAskQty3':data[18],'nBestAsk4':data[19],'nBestAskQty4':data[20],'nBestAsk5':data[21],'nBestAskQty5':data[22],'nExtendAsk':data[23],'nExtendAskQty':data[24],'nSimulate':data[25]
+								   })
 			self.filelog(self.market_data,[in_time,bstrStockNo,api_time,api_timestamp,nBuyTotalQty,nSellTotalQty,nBuyTotalCount,nSellTotalCount,nBuyDealTotalCount,nSellDealTotalCount])
 
 
@@ -223,8 +233,8 @@ class CAP_Thread(threading.Thread):
 			df=math.pow(10,pStock.sDecimal)
 			bstrStockName=self.best5_id_dict[sStockIdx]
 			self.best5_dict[bstrStockName]=(self.timestr,
-					nBestBid1/df,nBestBidQty1,nBestBid2/df,nBestBidQty2,nBestBid3/df,nBestBidQty3,nBestBid4/df,nBestBidQty4,nBestBid5,nBestBidQty5,nExtendBid/df,nExtendBidQty,
-					nBestAsk1/df,nBestAskQty1,nBestAsk2/df,nBestAskQty2,nBestAsk3/df,nBestAskQty3,nBestAsk4/df,nBestAskQty4,nBestAsk5,nBestAskQty5,nExtendAsk/df,nExtendAskQty,nSimulate)
+					nBestBid1/df,nBestBidQty1,nBestBid2/df,nBestBidQty2,nBestBid3/df,nBestBidQty3,nBestBid4/df,nBestBidQty4,nBestBid5/df,nBestBidQty5,nExtendBid/df,nExtendBidQty,
+					nBestAsk1/df,nBestAskQty1,nBestAsk2/df,nBestAskQty2,nBestAsk3/df,nBestAskQty3,nBestAsk4/df,nBestAskQty4,nBestAsk5/df,nBestAskQty5,nExtendAsk/df,nExtendAskQty,nSimulate)
 
 
 	def get_time(self):
