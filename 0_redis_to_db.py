@@ -13,20 +13,24 @@ sorted_feature_key=[]
 sorted_option_key=[]
 
 
-def InsertIfNotExist(query,data,keys,vals):
-	sql='IF NOT EXISTS (SELECT * FROM RawData WHERE Market=%s and Date=%s and Time=%s) INSERT INTO RawData(%s) VALUES(%s)'%(
-			"'"+data['Market']+"'",
-			"'"+data['Date']+"'",
-			"'"+data['Time']+"'",
-			','.join(keys),
-			','.join(vals)
-			)
-	#print(sql)	
+def InsertIfNotExist(redis_key,query,data,keys,vals):
 	try:
+		sql='IF NOT EXISTS (SELECT * FROM RawData WHERE Market=%s and Date=%s and Time=%s) INSERT INTO RawData(%s) VALUES(%s)'%(
+				"'"+data['Market']+"'",
+				"'"+data['Date']+"'",
+				"'"+data['Time']+"'",
+				','.join(keys),
+				','.join(vals)
+				)
+		#print(sql)	
 		r,cnt=query.ExecDB(sql)
 		#if cnt==1:	print("Key inserted~")
 		#if cnt==-1:	print("Key duplicate,do nothing~")
 	except:
+		print('-----------------------------------')
+		print(redis_key,"error:")
+		print(data)
+		print('-----------------------------------')
 		return False
 
 	return True
@@ -52,6 +56,8 @@ if __name__ == '__main__':
 	sorted_feature_key.sort()
 	sorted_option_key.sort()
 	print('sort time:',time.time()-t0)
+	print('future data cnt:',len(sorted_feature_key))
+	print('option data cnt:',len(sorted_option_key))
 	###################################################################	
 	for i in range(len(sorted_feature_key)):
 		kDate,kTime,kName=sorted_feature_key[i].split(',')
@@ -71,12 +77,13 @@ if __name__ == '__main__':
 	t0 = time.time()
 	for fk in sorted_feature_key:
 		fdata=cache.hgetall(fk)
+		if len(fdata)<37:continue
 		keys=[]
 		vals=[]
 		for item in fdata:
 			keys.append(item)
 			vals.append("'"+fdata[item]+"'")
-		if InsertIfNotExist(qf,fdata,keys,vals)==True:
+		if InsertIfNotExist(fk,qf,fdata,keys,vals)==True:
 			cache.delete(fk)
 			#print('success..redis key',fk,'deleted')
 		else:
@@ -86,12 +93,13 @@ if __name__ == '__main__':
 	t0 = time.time()
 	for ok in sorted_option_key:
 		odata=cache.hgetall(ok)
+		if len(fdata)<37:continue
 		keys=[]
 		vals=[]
 		for item in odata:
 			keys.append(item)
 			vals.append("'"+odata[item]+"'")
-		if InsertIfNotExist(qc,odata,keys,vals)==True:
+		if InsertIfNotExist(ok,qc,odata,keys,vals)==True:
 			cache.delete(ok) 
 			#print('success..redis key',ok,'deleted')
 		else:
