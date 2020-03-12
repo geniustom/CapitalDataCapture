@@ -9,3 +9,6 @@ timeout /t 20
 start run_option.bat 300 400
 timeout /t 20
 start run_option.bat 400 500
+
+timeout /t 10
+start run_sync.bat

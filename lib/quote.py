@@ -17,7 +17,7 @@ class CAP_Thread(threading.Thread):
 			self.parent.log.critical('[v]OnConnection:', self.MSG(nKind),nKind, self.MSG(nCode))	
 			if nKind==3003: self.parent.step2()
 		def OnNotifyServerTime(self,sHour,sMinute,sSecond,nTotal):
-			self.parent.watchdog=0
+			#self.parent.watchdog=0  #關閉以時間過檢查 可能較佳
 			self.parent.timestr="{}:{}:{}".format(str(sHour).zfill(2),str(sMinute).zfill(2),str(sSecond).zfill(2))
 			self.parent.timestamp=nTotal
 			#log.info(sHour,":",sMinute,":",sSecond,"--",nTotal)
