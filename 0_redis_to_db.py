@@ -24,6 +24,7 @@ def InsertIfNotExist(redis_key,query,data,keys,vals):
 				)
 		#print(sql)	
 		r,cnt=query.ExecDB(sql)
+		print(r,cnt)
 		#if cnt==1:	print("Key inserted~")
 		#if cnt==-1:	print("Key duplicate,do nothing~")
 	except:
@@ -35,6 +36,18 @@ def InsertIfNotExist(redis_key,query,data,keys,vals):
 
 	return True
 
+
+def CheckKeyIsInvalid(key):
+	m,t,d= str(key).split(',')
+	today=time.strftime("%y%m%d",time.localtime())
+	if m=='' or t=='' or d=='': 
+		print('Key',key,' is invalid')
+		return True
+	if int(today)>int(d): 
+		print('Key',key,' is expire')
+		return True
+	return False	
+	
 
 if __name__ == '__main__':
 	###################################################################
@@ -77,7 +90,9 @@ if __name__ == '__main__':
 	t0 = time.time()
 	for fk in sorted_feature_key:
 		fdata=cache.hgetall(fk)
-		if len(fdata)<37:continue
+		if len(fdata)<37:
+			if CheckKeyIsInvalid(fk)==True: cache.delete(fk) 
+			continue
 		keys=[]
 		vals=[]
 		for item in fdata:
@@ -93,7 +108,9 @@ if __name__ == '__main__':
 	t0 = time.time()
 	for ok in sorted_option_key:
 		odata=cache.hgetall(ok)
-		if len(fdata)<37:continue
+		if len(fdata)<37:
+			if CheckKeyIsInvalid(ok)==True: cache.delete(ok) 
+			continue
 		keys=[]
 		vals=[]
 		for item in odata:
