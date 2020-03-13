@@ -24,7 +24,7 @@ def InsertIfNotExist(redis_key,query,data,keys,vals):
 				)
 		#print(sql)	
 		r,cnt=query.ExecDB(sql)
-		print(r,cnt)
+		#print(r,cnt)
 		#if cnt==1:	print("Key inserted~")
 		#if cnt==-1:	print("Key duplicate,do nothing~")
 	except:
