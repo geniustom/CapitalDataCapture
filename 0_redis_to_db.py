@@ -88,10 +88,12 @@ if __name__ == '__main__':
 	
 	###################################################################
 	t0 = time.time()
+	fk_invalid_cnt=0
 	for fk in sorted_feature_key:
 		fdata=cache.hgetall(fk)
 		if len(fdata)<37:
 			if CheckKeyIsInvalid(fk)==True: cache.delete(fk) 
+			fk_invalid_cnt+=1
 			continue
 		keys=[]
 		vals=[]
@@ -103,13 +105,15 @@ if __name__ == '__main__':
 			#print('success..redis key',fk,'deleted')
 		else:
 			pass
-	print('future sync time:',time.time()-t0)
+	print('future sync time:',time.time()-t0,',invalid_cnt=',fk_invalid_cnt)
 	###################################################################
 	t0 = time.time()
+	ok_invalid_cnt=0
 	for ok in sorted_option_key:
 		odata=cache.hgetall(ok)
 		if len(fdata)<37:
 			if CheckKeyIsInvalid(ok)==True: cache.delete(ok) 
+			ok_invalid_cnt+=1
 			continue
 		keys=[]
 		vals=[]
@@ -121,7 +125,7 @@ if __name__ == '__main__':
 			#print('success..redis key',ok,'deleted')
 		else:
 			pass
-	print('option sync time:',time.time()-t0)
+	print('option sync time:',time.time()-t0,',invalid_cnt=',ok_invalid_cnt)
 	###################################################################
 
 
