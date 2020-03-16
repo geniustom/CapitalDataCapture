@@ -28,10 +28,8 @@ def InsertIfNotExist(redis_key,query,data,keys,vals):
 		#if cnt==1:	print("Key inserted~")
 		#if cnt==-1:	print("Key duplicate,do nothing~")
 	except:
-		print('-----------------------------------')
-		print(redis_key,"error:")
+		print('-----------------------------------'redis_key,"error:",'-----------------------------------')
 		print(data)
-		print('-----------------------------------')
 		return False
 
 	return True
