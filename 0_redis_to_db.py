@@ -28,7 +28,7 @@ def InsertIfNotExist(redis_key,query,data,keys,vals):
 		#if cnt==1:	print("Key inserted~")
 		#if cnt==-1:	print("Key duplicate,do nothing~")
 	except:
-		print('-----------------------------------'redis_key,"error:",'-----------------------------------')
+		print('------------------- ',redis_key,' error -------------------')
 		print(data)
 		return False
 
@@ -92,6 +92,8 @@ if __name__ == '__main__':
 		if len(fdata)<37:
 			if CheckKeyIsInvalid(fk)==True: cache.delete(fk) 
 			fk_invalid_cnt+=1
+			print('------------------- ',fk,' error -------------------')
+			print(fdata)
 		else:
 			keys=[]
 			vals=[]
@@ -112,17 +114,19 @@ if __name__ == '__main__':
 		if len(fdata)<37:
 			if CheckKeyIsInvalid(ok)==True: cache.delete(ok) 
 			ok_invalid_cnt+=1
-			continue
-		keys=[]
-		vals=[]
-		for item in odata:
-			keys.append(item)
-			vals.append("'"+odata[item]+"'")
-		if InsertIfNotExist(ok,qc,odata,keys,vals)==True:
-			cache.delete(ok) 
-			#print('success..redis key',ok,'deleted')
+			print('------------------- ',ok,' error -------------------')
+			print(odata)
 		else:
-			pass
+			keys=[]
+			vals=[]
+			for item in odata:
+				keys.append(item)
+				vals.append("'"+odata[item]+"'")
+			if InsertIfNotExist(ok,qc,odata,keys,vals)==True:
+				cache.delete(ok) 
+				#print('success..redis key',ok,'deleted')
+			else:
+				pass
 	print('option sync time:',time.time()-t0,',invalid_cnt=',ok_invalid_cnt)
 	###################################################################
 
