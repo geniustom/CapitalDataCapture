@@ -94,17 +94,17 @@ if __name__ == '__main__':
 		if len(fdata)<37:
 			if CheckKeyIsInvalid(fk)==True: cache.delete(fk) 
 			fk_invalid_cnt+=1
-			continue
-		keys=[]
-		vals=[]
-		for item in fdata:
-			keys.append(item)
-			vals.append("'"+fdata[item]+"'")
-		if InsertIfNotExist(fk,qf,fdata,keys,vals)==True:
-			cache.delete(fk)
-			#print('success..redis key',fk,'deleted')
 		else:
-			pass
+			keys=[]
+			vals=[]
+			for item in fdata:
+				keys.append(item)
+				vals.append("'"+fdata[item]+"'")
+			if InsertIfNotExist(fk,qf,fdata,keys,vals)==True:
+				cache.delete(fk)
+				#print('success..redis key',fk,'deleted')
+			else:
+				pass
 	print('future sync time:',time.time()-t0,',invalid_cnt=',fk_invalid_cnt)
 	###################################################################
 	t0 = time.time()

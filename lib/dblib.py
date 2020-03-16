@@ -26,7 +26,7 @@ class DBConn:
 		self.conn=win32com.client.Dispatch(r"ADODB.Connection")
 		self.connstr= "Provider=SQLNCLI.1;Persist Security Info=True;Data Source="+host+";Initial Catalog="+cata+";User ID="+uid+";Password="+pwd+";"
 		self.conn.Open(self.connstr)
-		print (tt.spendtime("OPDB Conn Time"))
+		print (tt.spendtime(cata,"DB Conn Time"))
 		
 class Query:
 	def __init__(self,conn):
