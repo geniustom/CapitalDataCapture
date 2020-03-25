@@ -92,8 +92,8 @@ if __name__ == '__main__':
 		if len(fdata)<37:
 			if CheckKeyIsInvalid(fk)==True: cache.delete(fk) 
 			fk_invalid_cnt+=1
-			print('------------------- ',fk,' error -------------------')
-			print(fdata)
+			#print('------------------- ',fk,' error -------------------')
+			#print(fdata)
 		else:
 			keys=[]
 			vals=[]
@@ -114,8 +114,8 @@ if __name__ == '__main__':
 		if len(fdata)<37:
 			if CheckKeyIsInvalid(ok)==True: cache.delete(ok) 
 			ok_invalid_cnt+=1
-			print('------------------- ',ok,' error -------------------')
-			print(odata)
+			#print('------------------- ',ok,' error -------------------')
+			#print(odata)
 		else:
 			keys=[]
 			vals=[]
