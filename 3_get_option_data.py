@@ -30,7 +30,7 @@ if __name__ == '__main__':
 	tick_data,price_data,market_data,stock_code=init()
 	t1=lq.CAP_Thread(Id,Pw,log,stock_code,price_data,tick_data,market_data,thread_id=tid,redis_host=RedisHost,from_idx=from_idx,to_idx=to_idx)
 	t1.start()
-	while t1.is_alive(deadline=10000):
+	while t1.is_alive(deadline=15000):
 		time.sleep(0.0001)
 		pythoncom.PumpWaitingMessages()
 	t1.join()

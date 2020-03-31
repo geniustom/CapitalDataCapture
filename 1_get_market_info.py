@@ -40,6 +40,16 @@ class CAP_Thread(threading.Thread):
 			elif sMarketNo==2: self.parent.FilterFeatureList(bstrStockData)
 			elif sMarketNo==3: self.parent.FilterOptionList(bstrStockData)
 			#if ret==True: self.parent.step3()
+
+	class skR_events:
+		def __init__(self, parent):
+			self.MSG=parent.MSG
+			self.parent=parent
+		def OnReplyMessage(self, bstrUserID, bstrMessage, sConfirmCode=0xFFFF):
+			#根據API 手冊，login 前會先檢查這個 callback, 
+			#要返回 VARIANT_TRUE 給 server,  表示看過公告了，我預設返回值是 0xFFFF
+			print('OnReplyMessage', bstrUserID, bstrMessage)
+			return sConfirmCode  
 		
 	def __init__(self,tid,tpw,log):
 		threading.Thread.__init__(self)
@@ -47,8 +57,12 @@ class CAP_Thread(threading.Thread):
 		from comtypes.gen import SKCOMLib as sk
 		self.skC=cc.CreateObject(sk.SKCenterLib,interface=sk.ISKCenterLib)
 		self.skQ=cc.CreateObject(sk.SKQuoteLib,interface=sk.ISKQuoteLib)
+		self.skR=cc.CreateObject(sk.SKReplyLib,interface=sk.ISKReplyLib)
+		#Configuration
 		self.EventQ=self.skQ_events(self)
 		self.ConnectionQ = cc.GetEvents(self.skQ, self.EventQ)
+		self.EventR=self.skR_events(self)
+		self.ConnectionR = cc.GetEvents(self.skR, self.EventR)
 		self.feature_list=[]
 		self.option_list=[]
 		self.stock_list=[]
@@ -110,7 +124,7 @@ class CAP_Thread(threading.Thread):
 		market_code=[]
 		if len(tmp_dict)>500 or len(tmp_dict)<70: return 	 #忽略股票與外幣期貨
 		for m in tmp_dict:
-			if (M0 in m or M1 in m) and (',' in m) and not('/' in m) and not('AM' in m): 
+			if (M0 in m or M1 in m or '00,' in m) and (',' in m) and not('/' in m) and not('AM' in m): 
 				c=m.split(',')[0]
 				market_dict.append(m)
 				market_code.append(c)
@@ -166,7 +180,8 @@ class CAP_Thread(threading.Thread):
 	def run(self):
 		import winsound
 		winsound.MessageBeep()
-		if self.skQ.SKQuoteLib_IsConnected()==0: self.step1()
+		#if self.skQ.SKQuoteLib_IsConnected()==0: self.step1()  	#2.13.16 之後的版本要先登入,此行要註解掉
+		self.step1()
 		#self.log.info("RequestTick,", self.MSG(self.skQ.SKQuoteLib_RequestTicks(0, 'TX00')[1]))		
 		#log.info("RequestServerTime",self.MSG(self.skQ.SKQuoteLib_RequestServerTime()))
 

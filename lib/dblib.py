@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 import numpy as np
 import time
-from PIL import Image
-import matplotlib.pyplot as plt
+
 
 END_K_INDEX = 295
 STOP_LOSE = 40 #20點停損
@@ -66,8 +65,110 @@ def seq_diff (x,x0=False):
 
 
 
-	       
+class TradeData:
+	def __init__(self,conn,market):
+		import imp,lib.indicator as indl;       imp.reload(indl);
+		self.dbconn=conn
+		self.dt=Query(conn)
+		self.market=market
+		#self.sqlfield="Future_CurPrice,TDATETIME,Future_Volume,Future_TotalBuyVol, Future_TotalSellVol,FutureWant_TrustBuyVol,FutureWant_TrustSellVol,Future_Volume,FutureWant_TrustBuyCnt,FutureWant_TrustSellCnt,FutureWant_TotalBuyCnt,FutureWant_TotalSellCnt,RealWant_Uppers,RealWant_Downs,RealWant_UpperLimits,RealWant_DownLimits,RealWant_Steadys,FutureM_Volume,FutureM_TotalBuyVol, FutureM_TotalSellVol,FutureWantM_TrustBuyVol,FutureWantM_TrustSellVol,FutureM_Volume,FutureWantM_TrustBuyCnt,FutureWantM_TrustSellCnt,FutureWantM_TotalBuyCnt,FutureWantM_TotalSellCnt,Future_TF_Volume,FutureWant_TF_TrustBuyVol,FutureWant_TF_TrustSellVol,Future_TF_Volume,FutureWant_TF_TrustBuyCnt,FutureWant_TF_TrustSellCnt,FutureWant_TF_TotalBuyCnt,FutureWant_TF_TotalSellCnt,Future_TE_Volume,FutureWant_TE_TrustBuyVol,FutureWant_TE_TrustSellVol,Future_TE_Volume,FutureWant_TE_TrustBuyCnt,FutureWant_TE_TrustSellCnt,FutureWant_TE_TotalBuyCnt,FutureWant_TE_TotalSellCnt"
+		#self.sqlfield="*"
+	   
+		self.sqlfield ="id,Market,Date,Time,InTime,TimsStamp,nBuyTotalQty,nSellTotalQty,nBuyTotalCount,nSellTotalCount,nBuyDealTotalCount,nSellDealTotalCount,PriceTime,nOpen,nHigh,nLow,nClose,nTQty"        
+
+		r, rcnt = self.dt.QueryDB("SELECT [DATE] FROM (SELECT DISTINCT [DATE] FROM RawData WHERE [DATE]>'20/03/13' AND [Market]='"+self.market+"' AND [PriceTime]=[Time]) as NEW ORDER BY [DATE]")
+		rr=r.GetRows(rcnt)   
+		#print rr
+		self.DateList=[]            #撈db抓到的所有tdate
+		self.DateListStart=[]       #對應該tdate的起始索引位置
+		self.DateListEnd=[]         #對應該tdate的結束索引位置
+		self.AllData=None
+		for i in range(len(rr[0])):
+			self.DateList.append(rr[0][i][:8])
+		self.DateCount=rcnt
+		
+	def QueryDBtoIndicators(self,SQL_Str,indGroup=None):
+		import imp,lib.indicator as indl;       imp.reload(indl);
+		self.Qy=Query(self.dbconn)
+		print(SQL_Str)
+		r, rcnt= self.Qy.QueryDB(SQL_Str)
+		print ("Data count : " + str(rcnt))  #just for debug
+		rr=r.GetRows(rcnt)        
+		if indGroup is None:
+			indGroup=indl.indicatorGroup()
+		indGroup.names = [field.Name for field in r.Fields]
+		i=0
+		for field_name in indGroup.names:
+			ind=indl.indicator()
+			ind.name=field_name
+			ind.data=np.array(rr[i])
+			i+=1
+			indGroup.ids.append(ind)
+		return  indGroup
+	
+	def FetchDateByDB(self,day):      # 即時跑策略時用
+		self.DaySQL = "Select " + self.sqlfield + " from RawData where [DATE]='" + day + "' AND [Market]='"+self.market+"' AND [PriceTime]=[Time] ORDER BY [TimsStamp]"
+		indi=self.QueryDBtoIndicators(self.DaySQL)
+		indi.GetBaseIndicator()
+		return indi 
+
+	def FetchDateByMem(self,day):     # 離線回測時用
+		import imp,lib.indicator as indl;       imp.reload(indl);
+		#沒資料時自動load資料
+		if self.AllData==None:
+			tt=timer()
+			self.FetchAllData()
+			print (tt.spendtime("DB Get All Data"))
+		
+		DayIndex=self.DateList.index(day)
+		RecStart=self.DateListStart[DayIndex]
+		RecEnd=self.DateListEnd[DayIndex]
+		RecLen=RecEnd-RecStart
+		indi=indl.indicatorGroup()
+		for i in range(len(self.AllData.ids)):
+			ids=indl.indicator()
+			ids.count=RecLen
+			ids.name=self.AllData.ids[i].name
+			ids.data=self.AllData.ids[i].data[RecStart:RecEnd] #np.array(
+			indi.ids.append(ids)
+		#print self.AllData.ids[1][RecStart:RecEnd]
+		#print indi.get("DATE",list_type=1)
+		return indi
+
+	def FetchAllData(self):
+		# 420604 筆以上會出問題
+		self.AllDataSQL = "Select " + self.sqlfield + " from RawData WHERE [DATE]>'20/03/13' AND [Market]='"+self.market+"'  AND [PriceTime]=[Time] ORDER BY [DATE],[TimsStamp]"
+		indi=self.QueryDBtoIndicators(self.AllDataSQL)
+		indi.GetBaseIndicator()    
+		SearchIndex=0
+		indiDayList=indi.get("DATE",list_type=1)
+		for i in range(len(self.DateList)):          
+			for j in range(SearchIndex,indi.len):
+				if self.DateList[i]==indiDayList[j]:
+					self.DateListStart.append(SearchIndex)
+					break
+				SearchIndex+=1
+				
+		for i in range(len(self.DateList)): 
+			try:
+				self.DateListEnd.append(self.DateListStart[i+1]-1)      #
+			except:
+				self.DateListEnd.append(indi.len)                            #最後
+			
+		self.AllData=indi        
+		
+		#indilist =indl.indicatorGroup()
+		#indilist[i]
+		
+		
+		
+	
+
+
+'''
 if __name__ == '__main__':
+	from PIL import Image
+	import matplotlib.pyplot as plt
 	timg=TradeImg(TopN=30,mode='test')
 	timg.prepare_data()
 
@@ -77,44 +178,4 @@ if __name__ == '__main__':
 	plt.plot(timg.GetSellStopLose(date))
 	m=timg.GetData(date,300)
 	print(m)
-	
-
-
-
-
-
-
-
-
-
-
-
-
-'''
-class TradeData:
-	def __init__(self,conn):
-		self.dbconn=conn
-		self.dt=Query(conn) 
-		self.sqlfield="C_CurPrice,C_TrustBuyCnt,C_TrustSellCnt,C_TrustBuyVol,C_TrustSellVol,C_TotalBuyCnt,C_TotalSellCnt,C_Volume"    #TimeIndex,Contract,Sprice,
-		r, rcnt = self.dt.QueryDB("SELECT convert(varchar,TDATE,11) FROM (SELECT DISTINCT TDATE FROM RealTimeOption WHERE Future_CurPrice<>0) AS NEW ORDER BY TDATE")
-		rr=r.GetRows(rcnt)   
-		#print rr
-		self.DateList=[]            #撈db抓到的所有tdate
-		self.DateListStart=[]       #對應該tdate的起始索引位置
-		self.DateListEnd=[]         #對應該tdate的結束索引位置
-		self.DateTXWTag=[]          #周選擇權每天的TAG
-		self.DateATMPrice=[]        #周選擇權每天的開盤價平履約價
-		self.AllData=[]             #用於回測的所有資料
-		for i in range(len(rr[0])):
-			self.DateList.append(rr[0][i][:8])
-		self.DateCount=rcnt			
-
-
-cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER=127.0.0.1;DATABASE=FutureHis;UID=sa;PWD=geniustom')
-cursor = cnxn.cursor()
-
-cursor.execute("select * from RealTimeFuture where TDATE='18/03/08' ")
-row = cursor.fetchone()
-if row:
-	print(row)
 '''

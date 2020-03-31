@@ -5,6 +5,7 @@ import time, os,threading ,datetime , math
 import comtypes.client as cc
 cc.GetModule(os.path.split(os.path.realpath(__file__))[0] + r'\SKCOM.dll')
 import comtypes.gen.SKCOMLib as sk
+SHOW_DETAIL=False
 
 
 class CAP_Thread(threading.Thread):
@@ -17,7 +18,7 @@ class CAP_Thread(threading.Thread):
 			self.parent.log.critical('[v]OnConnection:', self.MSG(nKind),nKind, self.MSG(nCode))	
 			if nKind==3003: self.parent.step2()
 		def OnNotifyServerTime(self,sHour,sMinute,sSecond,nTotal):
-			#self.parent.watchdog=0  #關閉以時間過檢查 可能較佳
+			#self.parent.watchdog=0  #關閉以時間做檢查 可能較佳
 			self.parent.timestr="{}:{}:{}".format(str(sHour).zfill(2),str(sMinute).zfill(2),str(sSecond).zfill(2))
 			self.parent.timestamp=nTotal
 			#log.info(sHour,":",sMinute,":",sSecond,"--",nTotal)
@@ -46,15 +47,20 @@ class CAP_Thread(threading.Thread):
 			self.parent.skQ.SKQuoteLib_GetStockByIndex(sMarketNo, sStockidx, pStock)
 			self.parent.get_price(self,pStock.bstrStockNo,pStock.nOpen/math.pow(10,pStock.sDecimal),pStock.nHigh/math.pow(10,pStock.sDecimal),pStock.nLow/math.pow(10,pStock.sDecimal),pStock.nClose/math.pow(10,pStock.sDecimal),pStock.nTQty)
 
+	class skR_events:
+		def __init__(self, parent):
+			self.MSG=parent.MSG
+			self.parent=parent
+		def OnReplyMessage(self, bstrUserID, bstrMessage, sConfirmCode=0xFFFF):
+			#根據API 手冊，login 前會先檢查這個 callback, 
+			#要返回 VARIANT_TRUE 給 server,  表示看過公告了，預設返回值是 0xFFFF
+			self.parent.log.critical('[v]OnReplyMessage:', bstrUserID, bstrMessage)	
+			return sConfirmCode  
 		
 	def __init__(self,tid,tpw,log,stock_code,price_data,tick_data,market_data,thread_id=0,redis_host='localhost',from_idx=0,to_idx=0):
 		threading.Thread.__init__(self)
 		import json
-		import redis   #使用python来操作redis用法详解  https://www.jianshu.com/p/2639549bedc8 导入redis模块，通过python操作redis 也可以直接在redis主机的服务端操作缓存数据库
-		#cache = redis.Redis(host='localhost', port=6379, decode_responses=True)   # host是redis主机，需要redis服务端和客户端都启动 redis默认端口是6379
-		pool = redis.ConnectionPool(host=redis_host, port=6379, decode_responses=True,max_connections=50)
-		self.cache = redis.Redis(connection_pool=pool)
-		
+		self.redis_host=redis_host
 		self.tid=thread_id
 		self.stock_list=[]
 		self.stock_code = json.load(stock_code)
@@ -75,10 +81,19 @@ class CAP_Thread(threading.Thread):
 		self.sk_init()
 		
 	def sk_init(self):
+		import redis   #使用python来操作redis用法详解  https://www.jianshu.com/p/2639549bedc8 导入redis模块，通过python操作redis 也可以直接在redis主机的服务端操作缓存数据库
+		#cache = redis.Redis(host='localhost', port=6379, decode_responses=True)   # host是redis主机，需要redis服务端和客户端都启动 redis默认端口是6379
+		pool = redis.ConnectionPool(host=self.redis_host, port=6379, decode_responses=True,max_connections=50)
+		self.cache = redis.Redis(connection_pool=pool)
+		
 		self.skC=cc.CreateObject(sk.SKCenterLib,interface=sk.ISKCenterLib)
 		self.skQ=cc.CreateObject(sk.SKQuoteLib,interface=sk.ISKQuoteLib)
+		self.skR=cc.CreateObject(sk.SKReplyLib,interface=sk.ISKReplyLib)
+		#Configuration
 		self.EventQ=self.skQ_events(self)
+		self.EventR=self.skR_events(self)
 		self.ConnectionQ = cc.GetEvents(self.skQ, self.EventQ)
+		self.ConnectionR = cc.GetEvents(self.skR, self.EventR)
 
 
 	def join(self):
@@ -90,9 +105,11 @@ class CAP_Thread(threading.Thread):
 		return self.skC.SKCenterLib_GetReturnCodeMessage(code)
 	
 	def delay(self,sec):
-		for i in range(sec):
+		import pythoncom
+		for i in range(sec*10):
 			self.watchdog=0
-			time.sleep(1)
+			time.sleep(0.1)
+			pythoncom.PumpWaitingMessages()
 			pass
 	
 	def step1(self): #登入
@@ -106,21 +123,26 @@ class CAP_Thread(threading.Thread):
 		for p in range(part):
 			quote_list=','.join(self.stock_code[p*pagelen:p*pagelen+pagelen])	 
 			#print(quote_list)
-			self.log.critical("[3]RequestStocks", self.skQ.SKQuoteLib_RequestStocks(p,quote_list),"tid:",self.tid)
+			self.log.critical("[3]RequestStocks", self.skQ.SKQuoteLib_RequestStocks(p+1,quote_list),"tid:",self.tid)
 		#剩下不足一頁的獨立做一次
 		if len(self.stock_code)>part*pagelen:
 			quote_list=','.join(self.stock_code[part*pagelen:])
 			#print(quote_list)	
-			self.log.critical("[3]RequestStocks", self.skQ.SKQuoteLib_RequestStocks(part,quote_list),"tid:",self.tid)
+			self.log.critical("[3]RequestStocks", self.skQ.SKQuoteLib_RequestStocks(part+1,quote_list),"tid:",self.tid)
+
+		self.delay(5)
+		print('共計有',len(self.stock_code),'個商品')
+		print('共計有',len(self.stock_dict),'個商品有交易紀錄')
+		self.step3()		
 		
 	def step3(self): #收取掛單資訊
 		import ctypes
-		p=0
+		p=1
 		print('----------- 商品列表 -----------')
 		print(','.join(self.stock_code))
 		for fc in self.stock_code:
-			self.log.info("[4]RequestTick,", self.skQ.SKQuoteLib_RequestTicks(p, fc),"tid:",self.tid)
-			self.log.info("[5]RequestTradeInfo,", self.skQ.SKQuoteLib_RequestFutureTradeInfo(ctypes.c_short(p),fc),"tid:",self.tid)
+			self.log.critical("[4]RequestTradeInfo,", self.skQ.SKQuoteLib_RequestFutureTradeInfo(ctypes.c_short(p),fc),"tid:",self.tid)
+			self.log.critical("[5]RequestTick,", self.skQ.SKQuoteLib_RequestTicks(p, fc),"tid:",self.tid)
 			p+=1
 
 	def filelog(self,file,data,log_on=False):
@@ -141,6 +163,9 @@ class CAP_Thread(threading.Thread):
 		nQty	成交量。
 		nSimulate	0:一般揭示 1:試算揭示
 		'''
+		#for debug only #
+		#if SHOW_DETAIL==True: print(sMarketNo, sStockIdx, nPtr, lDate, lTimehms, lTimemillismicros, nBid, nAsk, nClose, nQty, nSimulate)
+		#################
 		if sStockIdx in self.best5_dict:
 			bstrStockNo=self.best5_dict[sStockIdx]
 			#self.log.info(sMarketNo, sStockIdx, nPtr, lDate, lTimehms, lTimemillismicros, nBid, nAsk, nClose, nQty, nSimulate)
@@ -158,6 +183,9 @@ class CAP_Thread(threading.Thread):
 		nBuyDealTotalCount	(6)總成交買進筆數
 		nSellDealTotalCount	(7)總成交賣出筆數
 		'''
+		#for debug only #
+		if SHOW_DETAIL==True: print(bstrStockNo,sMarketNo,sStockidx,nBuyTotalCount,nSellTotalCount,nBuyTotalQty	,nSellTotalQty,nBuyDealTotalCount,nSellDealTotalCount)
+		#################
 		self.best5_id_dict[sStockidx]=bstrStockNo
 		in_time=self.get_time()
 		in_date=time.strftime("%y/%m/%d",time.localtime())
@@ -204,6 +232,9 @@ class CAP_Thread(threading.Thread):
 		nClose 	成交價
 		nTQty 	總量
 		'''
+		#for debug only #
+		if SHOW_DETAIL==True: print(bstrStockName,nOpen,nHigh,nLow,nClose,nTQty)
+		#################
 		if (nOpen!=0 and nHigh!=0 and nLow!=0 and nClose!=0):
 			self.stock_dict[bstrStockName]=(bstrStockName,self.timestr,nOpen,nHigh,nLow,nClose,nTQty)
 			self.filelog(self.price_data,[bstrStockName,self.timestr,nOpen,nHigh,nLow,nClose,nTQty])
@@ -227,6 +258,9 @@ class CAP_Thread(threading.Thread):
 		nExtendAsk,nExtendAskQty,延伸賣價,延伸賣量		
 		nSimulate 0:一般揭示 1:試算揭示
 		'''
+		#for debug only #
+		if SHOW_DETAIL==True: print(sMarketNo,sStockIdx,nBestBid1,nBestBidQty1,nBestBid2,nBestBidQty2,nBestBid3,nBestBidQty3,nBestBid4,nBestBidQty4,nBestBid5,nBestBidQty5,nExtendBid,nExtendBidQty,nBestAsk1,nBestAskQty1,nBestAsk2,nBestAskQty2,nBestAsk3,nBestAskQty3,nBestAsk4,nBestAskQty4,nBestAsk5,nBestAskQty5,nExtendAsk,nExtendAskQty,nSimulate)
+		#################
 		if sStockIdx in self.best5_id_dict:
 			pStock = sk.SKSTOCK()
 			self.skQ.SKQuoteLib_GetStockByIndex(sMarketNo, sStockIdx, pStock)
@@ -242,16 +276,14 @@ class CAP_Thread(threading.Thread):
 
 	def is_alive(self,deadline=10000):
 		self.watchdog+=1
+		if self.watchdog>=deadline:
+			self.log.critical('no data incomming!! deadline:',deadline,'watchdog:',self.watchdog)
 		return self.watchdog<deadline
 	
 	def run(self):
 		import winsound
 		winsound.MessageBeep()
-		if self.skQ.SKQuoteLib_IsConnected()==0: 
-			self.step1()
-			self.step2()
-			self.delay(5)
-			print('共計有',len(self.stock_code),'個商品')
-			print('共計有',len(self.stock_dict),'個商品有交易紀錄')
-			self.step3()
+		#if self.skQ.SKQuoteLib_IsConnected()==0:  	#2.13.16 之後的版本要先登入,此行要註解掉
+		self.step1()
+
 		
