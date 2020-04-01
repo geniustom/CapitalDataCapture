@@ -17,8 +17,8 @@ if __name__ == '__main__':
 	now = datetime.datetime.now().strftime('%y%m%d_%H%M')
 	
 	#輸入身分證與密碼
-	Id=conf.getpass(prompt='ID= ')
-	Pw=conf.getpass(prompt='PW= ')
+	Id=conf.getpass(prompt='ID= ',market='F')
+	Pw=conf.getpass(prompt='PW= ',market='F')
 	RedisHost=conf.get_redis_host()
 	print('Redis host:',RedisHost)
 	tid=0
