@@ -141,8 +141,8 @@ class CAP_Thread(threading.Thread):
 		print('----------- 商品列表 -----------')
 		print(','.join(self.stock_code))
 		for fc in self.stock_code:
-			self.log.critical("[4]RequestTradeInfo,", self.skQ.SKQuoteLib_RequestFutureTradeInfo(ctypes.c_short(p),fc),"tid:",self.tid)
-			self.log.critical("[5]RequestTick,", self.skQ.SKQuoteLib_RequestTicks(p, fc),"tid:",self.tid)
+			self.log.info("[4]RequestTradeInfo,", self.skQ.SKQuoteLib_RequestFutureTradeInfo(ctypes.c_short(p),fc),"tid:",self.tid)
+			self.log.info("[5]RequestTick,", self.skQ.SKQuoteLib_RequestTicks(p, fc),"tid:",self.tid)
 			p+=1
 
 	def filelog(self,file,data,log_on=False):
