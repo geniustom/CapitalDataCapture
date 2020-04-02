@@ -106,9 +106,9 @@ class CAP_Thread(threading.Thread):
 	
 	def delay(self,sec):
 		import pythoncom
-		for i in range(sec*10):
+		for i in range(sec*20):
 			self.watchdog=0
-			time.sleep(0.1)
+			time.sleep(0.05)
 			pythoncom.PumpWaitingMessages()
 			pass
 	
@@ -130,7 +130,7 @@ class CAP_Thread(threading.Thread):
 			#print(quote_list)	
 			self.log.critical("[3]RequestStocks", self.skQ.SKQuoteLib_RequestStocks(part+1,quote_list),"tid:",self.tid)
 
-		self.delay(5)
+		self.delay(3)
 		print('共計有',len(self.stock_code),'個商品')
 		print('共計有',len(self.stock_dict),'個商品有交易紀錄')
 		self.step3()		

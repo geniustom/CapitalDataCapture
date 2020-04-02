@@ -15,16 +15,18 @@ def init():
 if __name__ == '__main__':
 	log = lu.Logger(level='crit')
 	now = datetime.datetime.now().strftime('%y%m%d_%H%M')
+	from_idx=0 if len(sys.argv)!=3 else int(sys.argv[1])
+	to_idx=0 if len(sys.argv)!=3 else int(sys.argv[2])
+	idpw_idx = int(to_idx / 100)
 	
 	#輸入身分證與密碼
-	Id=conf.getpass(prompt='ID= ',market='F')
-	Pw=conf.getpass(prompt='PW= ',market='F')
+	Id=conf.getpass(prompt='ID= ',sn=idpw_idx)
+	Pw=conf.getpass(prompt='PW= ',sn=idpw_idx)
 	RedisHost=conf.get_redis_host()
 	print('Redis host:',RedisHost)
 	tid=0
 	
-	from_idx=0 if len(sys.argv)!=3 else int(sys.argv[1])
-	to_idx=0 if len(sys.argv)!=3 else int(sys.argv[2])
+
 	
 #while True:
 	tick_data,price_data,market_data,stock_code=init()
