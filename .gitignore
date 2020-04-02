@@ -1,6 +1,8 @@
 .DS_Store
 _*.py
+lib/_*.py
 *.pyc
 log/*
 data/*
+market_info/*
 __pycache__/*

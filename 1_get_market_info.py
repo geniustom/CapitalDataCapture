@@ -1,7 +1,7 @@
 #REF: https://easontseng.blogspot.com/2017/
 # -*- coding: utf-8 -*-
 import lib.util as lu
-import _config as conf
+import lib._config as conf
 import pythoncom, time, os,threading
 import comtypes.client as cc
 from datetime import datetime,date

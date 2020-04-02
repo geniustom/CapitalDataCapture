@@ -1,4 +1,4 @@
-import _config as conf
+import lib._config as conf
 import lib.util as lu
 import lib.quote as lq
 import pythoncom,time,datetime,sys

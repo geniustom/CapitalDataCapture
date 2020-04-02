@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import _config as conf
+import lib._config as conf
 import redis,time
 import lib.dblib as ldb
 

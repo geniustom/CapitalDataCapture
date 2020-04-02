@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import time, os,threading ,datetime , math
+import lib._config as conf
 import comtypes.client as cc
 cc.GetModule(os.path.split(os.path.realpath(__file__))[0] + r'\SKCOM.dll')
 import comtypes.gen.SKCOMLib as sk
@@ -113,7 +114,11 @@ class CAP_Thread(threading.Thread):
 			pass
 	
 	def step1(self): #登入
-		self.log.critical("[1]Login:", self.MSG(self.skC.SKCenterLib_Login(self.id,self.pw)),"tid:",self.tid)
+		msg=self.MSG(self.skC.SKCenterLib_Login(self.id,self.pw))
+		self.log.critical("[1]Login:",msg,"tid:",self.tid)
+		if msg=='SK_ERROR_LOGIN_WRONG_PASSWORD':
+			conf.sms('0917768975',self.id+'密碼錯誤登入失敗,已停止避免被鎖帳號')
+			while True: self.watchdog=0;time.sleep(0.1); #卡住避免重複啟動
 		self.log.critical("[2]EnterMonitor:", self.MSG(self.skQ.SKQuoteLib_EnterMonitor()),"tid:",self.tid)
 		
 
