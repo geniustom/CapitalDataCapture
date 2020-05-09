@@ -3,7 +3,7 @@
 import os,imp
 import common    as cm;      imp.reload(cm);
 import lib.dblib as dl;      imp.reload(dl);
-import ms01;					  imp.reload(ms01);
+import s01;					  imp.reload(s01);
 
 
 
@@ -19,4 +19,4 @@ def daytrade(s):
     return cm.runDayTrade(db,td,fName=s.FName,cName=__name__,sName=s.s1,sTittle=s.STittle)
 
 
-daytrade(ms01)
+daytrade(s01)

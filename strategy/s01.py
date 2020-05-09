@@ -4,20 +4,18 @@ import lib.indicator as ind; 	imp.reload(ind);
 ############################################################################### 
 def s1(self,PRICE,i,I):
     baseT= 15
-    if i==baseT:ind.GetIndicatorByType(I,"成筆差")
     if i< (baseT) : return
-    aa=I.get("小台純贏家作為00")[i-1]
-    amax=I.get("小台純贏家作為00高通道")[i-1]
-    amin=I.get("小台純贏家作為00低通道")[i-1]
+    aa=I.get("成筆差")[i-1]
     
-    if aa<amin : self.EnterShort(PRICE)
-    if aa>amax : self.EnterLong(PRICE)
+    if aa>1 : self.EnterShort(PRICE)
+    if aa<0 : self.EnterLong(PRICE)
     self.CheckDailyExitAll(I.get("TIME")[i],PRICE)
      
 ############################################################################### 
 import os
-STittle=u"[mc01]小台純贏家作為00通道策略"
+STittle=u"[s01]成筆差"
 Market='TX00'
+DorN='D'
 FName=os.path.split(__file__)[1].split('.')[0]
 if __name__ == '__main__':
     exec(open(os.path.split(os.path.realpath(__file__))[0]+'\\init.py').read())

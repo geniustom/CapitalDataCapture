@@ -66,16 +66,16 @@ def seq_diff (x,x0=False):
 
 
 class TradeData:
-	def __init__(self,conn,market):
+	def __init__(self,conn,market,DorN):
 		import imp,lib.indicator as indl;       imp.reload(indl);
 		self.dbconn=conn
 		self.dt=Query(conn)
 		self.market=market
+		self.DorN=DorN
 		#self.sqlfield="Future_CurPrice,TDATETIME,Future_Volume,Future_TotalBuyVol, Future_TotalSellVol,FutureWant_TrustBuyVol,FutureWant_TrustSellVol,Future_Volume,FutureWant_TrustBuyCnt,FutureWant_TrustSellCnt,FutureWant_TotalBuyCnt,FutureWant_TotalSellCnt,RealWant_Uppers,RealWant_Downs,RealWant_UpperLimits,RealWant_DownLimits,RealWant_Steadys,FutureM_Volume,FutureM_TotalBuyVol, FutureM_TotalSellVol,FutureWantM_TrustBuyVol,FutureWantM_TrustSellVol,FutureM_Volume,FutureWantM_TrustBuyCnt,FutureWantM_TrustSellCnt,FutureWantM_TotalBuyCnt,FutureWantM_TotalSellCnt,Future_TF_Volume,FutureWant_TF_TrustBuyVol,FutureWant_TF_TrustSellVol,Future_TF_Volume,FutureWant_TF_TrustBuyCnt,FutureWant_TF_TrustSellCnt,FutureWant_TF_TotalBuyCnt,FutureWant_TF_TotalSellCnt,Future_TE_Volume,FutureWant_TE_TrustBuyVol,FutureWant_TE_TrustSellVol,Future_TE_Volume,FutureWant_TE_TrustBuyCnt,FutureWant_TE_TrustSellCnt,FutureWant_TE_TotalBuyCnt,FutureWant_TE_TotalSellCnt"
 		#self.sqlfield="*"
 	   
 		self.sqlfield ="id,Market,Date,Time,InTime,TimsStamp,nBuyTotalQty,nSellTotalQty,nBuyTotalCount,nSellTotalCount,nBuyDealTotalCount,nSellDealTotalCount,PriceTime,nOpen,nHigh,nLow,nClose,nTQty"        
-
 		r, rcnt = self.dt.QueryDB("SELECT [DATE] FROM (SELECT DISTINCT [DATE] FROM RawData WHERE [DATE]>'20/03/13' AND [Market]='"+self.market+"' AND [PriceTime]=[Time]) as NEW ORDER BY [DATE]")
 		rr=r.GetRows(rcnt)   
 		#print rr
@@ -107,7 +107,18 @@ class TradeData:
 		return  indGroup
 	
 	def FetchDateByDB(self,day):      # 即時跑策略時用
-		self.DaySQL = "Select " + self.sqlfield + " from RawData where [DATE]='" + day + "' AND [Market]='"+self.market+"' AND [PriceTime]=[Time] ORDER BY [TimsStamp]"
+		import datetime
+		if self.DorN=='D':
+			#日盤timestamp 31500~49500
+			self.DaySQL = "Select " + self.sqlfield + " from RawData where [DATE]='" + day + "' AND [Market]='"+self.market+"' AND [PriceTime]=[Time] AND [TimsStamp]>=31500 AND [TimsStamp]<=49500 ORDER BY [TimsStamp]"
+		else:
+			#夜盤timestamp >=54000~ 隔日<19000
+			tomorrow=(datetime.datetime.strptime(day,"%y/%m/%d")+datetime.timedelta(days=1)).strftime("%y/%m/%d") #取得加一天的日期
+			self.DaySQL = "Select " + self.sqlfield + " from RawData where ([Market]='"+self.market+"') AND "
+			self.DaySQL = self.DaySQL+ "(([DATE]='" + day + "' AND [TimsStamp]>=54000 AND [TimsStamp]<86395) OR"
+			self.DaySQL = self.DaySQL+ "([DATE]='" + tomorrow + "' AND [TimsStamp]<19000 )) "
+			self.DaySQL = self.DaySQL+ "AND ([PriceTime]=[Time]) ORDER BY [id]"
+
 		indi=self.QueryDBtoIndicators(self.DaySQL)
 		indi.GetBaseIndicator()
 		return indi 
@@ -137,7 +148,16 @@ class TradeData:
 
 	def FetchAllData(self):
 		# 420604 筆以上會出問題
-		self.AllDataSQL = "Select " + self.sqlfield + " from RawData WHERE [DATE]>'20/03/13' AND [Market]='"+self.market+"'  AND [PriceTime]=[Time] ORDER BY [DATE],[TimsStamp]"
+		#self.AllDataSQL = "Select " + self.sqlfield + " from RawData WHERE [DATE]>'20/03/13' AND [Market]='"+self.market+"'  AND [PriceTime]=[Time] ORDER BY [DATE],[TimsStamp]"
+		if self.DorN=='D':
+			#日盤timestamp 31500~49500
+			self.AllDataSQL = "Select " + self.sqlfield + " from RawData where [DATE]>'20/04/05' AND [Market]='"+self.market+"' AND [PriceTime]=[Time] AND [TimsStamp]>=31500 AND [TimsStamp]<=49500 ORDER BY [TimsStamp]"
+		else:
+			#夜盤timestamp >=54000~ 隔日<19000
+			self.AllDataSQL = "Select " + self.sqlfield + " from RawData where ([DATE]>'20/04/05' AND [Market]='"+self.market+"') AND "
+			self.AllDataSQL = self.DaySQL+ "(([TimsStamp]>=54000 AND [TimsStamp]<86395) OR [TimsStamp]<19000 ) "
+			self.AllDataSQL = self.DaySQL+ "AND ([PriceTime]=[Time]) ORDER BY [id]"
+			
 		indi=self.QueryDBtoIndicators(self.AllDataSQL)
 		indi.GetBaseIndicator()    
 		SearchIndex=0

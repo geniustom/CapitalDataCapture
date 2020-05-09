@@ -10,8 +10,8 @@ try:
 	datecount = td.DateCount
 except:
 	db = dl.DBConn(host="127.0.0.1",uid="sa",pwd="geniustom",cata="FutureData")
-	print(Market)
-	td=dl.TradeData(db.conn,Market)
+	print(Market,DorN)
+	td=dl.TradeData(db.conn,Market,DorN)
 
 
 BackTestDays=60  #need >40

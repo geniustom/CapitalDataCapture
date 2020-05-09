@@ -63,6 +63,63 @@ class indicatorGroup:
 				self.ids[i].name=newname
 				#self.names[i]=newname
 				break
+			
+
+	def GetBaseIndicator(self):
+		self.changeNameTo("nClose"							,"指數")
+		self.changeNameTo("nOpen"							,"指數_開")
+		self.changeNameTo("nHigh"							,"指數_高")
+		self.changeNameTo("nLow"							,"指數_低")
+		self.changeNameTo("nTQty"            			,"成交量")
+		self.changeNameTo("nBuyTotalQty"   				,"委買口")
+		self.changeNameTo("nSellTotalQty"  				,"委賣口")
+		self.changeNameTo("nBuyTotalCount"   			,"委買筆")
+		self.changeNameTo("nSellTotalCount"  			,"委賣筆")
+		self.changeNameTo("nBuyDealTotalCount"   		,"買成筆")
+		self.changeNameTo("nSellDealTotalCount"  		,"賣成筆")
+		
+		self.add(u"純成交量",lb.seq_intg(lb.seq_diff(self.get("成交量"))))
+		self.add(u"純買成筆",lb.seq_intg(lb.seq_diff(self.get("買成筆"))))
+		self.add(u"純賣成筆",lb.seq_intg(lb.seq_diff(self.get("賣成筆"))))
+		
+		timelist=[]
+		daylist=[]
+		daylist=self.get("Date")
+		timelist=self.get("Time")
+		self.add('DATE',daylist) 
+		self.add('TIME',timelist) 			
+			
+			
+	def LoadCustomIndicator(self,N): 
+		#if type(N)==str :  N=unicode(N,"utf-8")
+		if N==u"成筆差" : 
+			return self.add(N,self.get("買成筆")-self.get("賣成筆"))
+		return []		
+		
+
+
+def GetIndicatorByType(indi,name):
+	pass
+'''
+	if name=="小台贏家00":
+		winner,loser,corr=indi.GetWinLoseDoCoef(0,15,"小台買成筆","小台賣成筆","小台成交量",30,0,1,0.6,0.7)  #最佳 0.6,0.7
+		indi.add(u"小台純贏家作為00",indi.GetPureDoPower(0,indi.len,"小台買成筆","小台賣成筆","小台成交量",winner[0],winner[1]))
+		x,y=indi.GetHighLowChannel(u"小台純贏家作為00",30,1,-1)
+		indi.add(u"小台純贏家作為00高通道",x)
+		indi.add(u"小台純贏家作為00低通道",y)
+'''
+
+def GetSpecialIndicator(indi):
+	return
+	#e,f,g,h,i,j=indi.GetDoPowerEx("小台買成筆","小台賣成筆","小台成交量",indi.mtx_winner_ub,indi.mtx_winner_lb,indi.mtx_loser_ub,indi.mtx_loser_ub)
+
+
+
+
+
+
+
+		
 ''' 
 	def LowPassFilter(self,ni,fi):
 		ret=lb.seq_intg(lb.seq_diff_filter(self.get(ni),fi))
@@ -235,58 +292,8 @@ class indicatorGroup:
 		return winner,loser,[corr_winner,corr_loser]
 			# ML01 相關性0.7 間距0.6最佳    
 
-	def GetBaseIndicator(self):
-
-		self.changeNameTo("nClose"							,"指數")
-		self.changeNameTo("nOpen"							,"指數_開")
-		self.changeNameTo("nHigh"							,"指數_高")
-		self.changeNameTo("nLow"							,"指數_低")
-		self.changeNameTo("nTQty"            			,"成交量")
-		self.changeNameTo("nBuyTotalQty"   				,"委買口")
-		self.changeNameTo("nSellTotalQty"  				,"委賣口")
-		self.changeNameTo("nBuyTotalCount"   			,"委買筆")
-		self.changeNameTo("nSellTotalCount"  			,"委賣筆")
-		self.changeNameTo("nBuyDealTotalCount"   		,"買成筆")
-		self.changeNameTo("nSellDealTotalCount"  		,"賣成筆")
 		
-		timelist=[]
-		daylist=[]
-		daylist=self.get("Date")
-		timelist=self.get("Time")
-		self.add('DATE',daylist) 
-		self.add('TIME',timelist) 
-		
-		
-	def LoadCustomIndicator(self,N): 
-		pass
-		#if type(N)==str :  N=unicode(N,"utf-8")
-		#################### 指數 ####################
-		if N==u"現期價差" : 
-			return self.add(N,self.get("大台指數")-self.get("現貨指數"))
-		return []
-'''		
-		
-
-
-def GetIndicatorByType(indi,name):
-	pass
 '''
-	if name=="小台贏家00":
-		winner,loser,corr=indi.GetWinLoseDoCoef(0,15,"小台買成筆","小台賣成筆","小台成交量",30,0,1,0.6,0.7)  #最佳 0.6,0.7
-		indi.add(u"小台純贏家作為00",indi.GetPureDoPower(0,indi.len,"小台買成筆","小台賣成筆","小台成交量",winner[0],winner[1]))
-		x,y=indi.GetHighLowChannel(u"小台純贏家作為00",30,1,-1)
-		indi.add(u"小台純贏家作為00高通道",x)
-		indi.add(u"小台純贏家作為00低通道",y)
-'''
-
-def GetSpecialIndicator(indi):
-	return
-	#e,f,g,h,i,j=indi.GetDoPowerEx("小台買成筆","小台賣成筆","小台成交量",indi.mtx_winner_ub,indi.mtx_winner_lb,indi.mtx_loser_ub,indi.mtx_loser_ub)
-
-
-
-
-
 
 
 '''
