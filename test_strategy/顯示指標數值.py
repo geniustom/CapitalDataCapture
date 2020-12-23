@@ -39,7 +39,7 @@ dayindi=il.indicatorGroup()
 #dayindi=tdt.FetchDateByDB("20/04/08")  #D:一路上漲170點   N:殺80後再漲100
 #dayindi=tdt.FetchDateByDB("20/04/09")  #D:漲100,跌150,再漲100  N:跌100,漲60,再跌100
 #dayindi=tdt.FetchDateByDB("20/04/10")  # D:一路上漲100點   N:漲80點又跌回收上影線
-dayindi=tdt.FetchDateByDB("20/04/23")  
+dayindi=tdt.FetchDateByDB("20/04/29")  
 
 
 

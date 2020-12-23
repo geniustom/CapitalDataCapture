@@ -4,6 +4,7 @@
 import time, os,threading ,datetime , math
 import lib._config as conf
 import comtypes.client as cc
+print('lib path:',os.path.split(os.path.realpath(__file__))[0] + r'\SKCOM.dll')
 cc.GetModule(os.path.split(os.path.realpath(__file__))[0] + r'\SKCOM.dll')
 import comtypes.gen.SKCOMLib as sk
 SHOW_DETAIL=False
