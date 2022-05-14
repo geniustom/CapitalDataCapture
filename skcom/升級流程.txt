@@ -1,0 +1,8 @@
+1. 裝delphi10 才能打包出 delphi 7 可用的 TLB
+2. 要用32bit的SKCOM.dll
+3. regsvr32 舊版, %systemroot%\SysWoW64\regsvr32.exe "%Dir%SKCOM.dll" 新版dll
+4. 用delphi 10 產生新板TLB, 要安裝回 delphi 7
+5. 開autoorder.dpr更新改動
+6. 本機測完, 測下單機, 若也正常,則完成
+7. git push
+8. SKCOM.dll 放在 D:\Dropbox\2020全新程式交易_DDE\Git\AutoOrder\skcom

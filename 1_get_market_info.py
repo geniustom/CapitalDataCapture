@@ -53,8 +53,12 @@ class CAP_Thread(threading.Thread):
 		
 	def __init__(self,tid,tpw,log):
 		threading.Thread.__init__(self)
-		cc.GetModule(os.path.split(os.path.realpath(__file__))[0] + r'\lib\SKCOM.dll')
-		from comtypes.gen import SKCOMLib as sk
+		lib_path=os.path.split(os.path.realpath(__file__))[0] + r'\lib\SKCOM.dll'
+		print('lib_path',lib_path)
+		cc.GetModule(lib_path)
+		
+		#from comtypes.gen import SKCOMLib as sk
+		import comtypes.gen.SKCOMLib as sk
 		self.skC=cc.CreateObject(sk.SKCenterLib,interface=sk.ISKCenterLib)
 		self.skQ=cc.CreateObject(sk.SKQuoteLib,interface=sk.ISKQuoteLib)
 		self.skR=cc.CreateObject(sk.SKReplyLib,interface=sk.ISKReplyLib)
